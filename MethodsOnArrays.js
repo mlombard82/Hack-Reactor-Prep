@@ -155,7 +155,7 @@ the temporary array to achieve the right order*/
 var list = ['Delta', 'alpha', 'CHARLIE', 'bravo']; //the array to be sorted.
 var mapped = list.map(function(el, i){             //temporary array holds objects with position and sort-value.
   return{index: i, value: el.toLowerCase()};
-})
+});
 mapped.sort(function(a, b){                        //sorting the mapped array containing the reduced values.
   return + (a.value > b.value) || + (a.value === b.value) -1;
 });
@@ -179,6 +179,28 @@ note: of course, if you specify a different number of elements to insert than th
       
 var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
 var removed = myFish.splice(2,0,'drum');
+console.log(myFish);
+console.log(removed);
+
+
+removed = myFish.splice(3, 1);
+console.log(myFish);
+console.log(removed);
+
+
+removed = myFish.splice(2, 1, 'trumpet');
+console.log(myFish);
+console.log(removed);
+
+
+removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+console.log(myFish);
+console.log(removed);
+
+
+removed = myFish.splice(3, myFish.length);
+console.log(myFish);
+console.log(removed);
 
 
 
