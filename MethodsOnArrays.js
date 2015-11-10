@@ -204,6 +204,64 @@ console.log(removed);
 
 
 
+/*
+unshift()
+adds one or more elements to the begining of an array and returns the new length of the array.
+arr.unshift()
+Is intentionally generic. can be 'called' or 'applied' to objects resembling arrays.
+*/
+var arr = [1, 2];
+console.log(arr.unshift(0));   //3
+console.log(arr);              // [0, 1, 2]
+
+
+
+
+
+
+ACCESOR METHODS:  do not modify the array, but return some representation of the array.
+
+/* concat()
+returns a new array comprised of the array on which it is called, joined with the array(s)/values provided
+as arguments.
+var new_array = old_array.concat(value)
+creates a new array consisting of the elements in the object on which it is called, followed in order by, 
+for each argument, the elements of that argument(if the argument is an array) or the argument itself if not
+an array.
+Concatenating arrays/values will leave the originals untouched. Furthermore, any operation on the new array
+will have no effect on the original array, and viceversa.
+*/
+concatenating 2 arrays
+var alpha = ['a', 'b', 'c'];
+numeric = [1, 2, 3];
+var alphanumeric = alpha.concat(numeric);
+console.log(alphanumeric );
+
+concatenating 3 arrays
+var num1 = [1, 2, 3];
+    num2 = [4, 5, 6];
+    num3 = [7, 8, 9];
+var nums = num1.concat(num2, num3);
+console.log(nums);
+
+concatenating values to an array
+var alpha = ['a', 'b', 'c'];
+var alphaNumeric = alpha.concat(1, [2, 3]);
+console.log(alphaNumeric);
+
+
+
+
+
+/* join()
+joins all elements of an array into a string.
+str = arr.join(',')
+the separator is optional. if omitted, the array elements are separated with a coma.
+if the separator is an empty string, all elements are joined without any characters in between tham.
+*/
+
+
+
 
 
 
