@@ -260,6 +260,22 @@ the separator is optional. if omitted, the array elements are separated with a c
 if the separator is an empty string, all elements are joined without any characters in between tham.
 */
 
+var a = ['Wind', 'Rain', 'Fire'];
+var myVar1 = a.join();            //"Wind,Rain,Fire"
+var myVar2 = a.join(', ');        //"Wind, Rain, Fire"
+var myVar3 = a.join(' + ');       //"Wind + Rain + Fire"
+var myVar4 = a.join('');          //"WindRainFire"
+
+
+console.log(myVar1);
+console.log(myVar2);
+console.log(myVar3);
+console.log(myVar4);
+
+
+
+
+
 
 
 
