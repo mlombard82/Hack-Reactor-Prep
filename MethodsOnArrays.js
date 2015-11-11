@@ -278,7 +278,7 @@ console.log(myVar4);
 
 /*
 slice()
-returns a shallow copy of a portion of an array into a new array object.
+Doesn't alter. Returns a shallow copy of a portion of an array into a new array object.
 arr.slice(begin, end);
 parameters: begin: zero based index at which to begin extraction.
            As a negative index, begin indicates an offset from the end of the sequence .slice(-2) extracts the
@@ -288,8 +288,46 @@ parameters: begin: zero based index at which to begin extraction.
            As a negative index, end indicates an offset from the end of the sequence .slice(2, -1) extracts the 
            third element through the second-to-last element in the sequence. if end is omitted, slice extracts
            to the end of the sequence(arr.length).
-      
 */
+
+var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+var citrus = fruits.slice(1,3);
+console.log(citrus);           //["Orange", "Lemon"]
+
+
+in the following example, slice creates a new array, newCar, from myCar. Both include a reference to the object
+myHonda. when the color of myHonda is changed ot purple, both arrays reflect the change.
+
+var myHonda = {color: 'red',
+              wheels:4,
+              engine: {cylinders:4, size:2.2}
+              };
+var myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
+var newCar = myCar.slice(0, 2);
+
+*there is a lot more to slice! (see printed pages)
+
+
+
+
+
+
+/* toString()
+returns a string containing each array element separated by commas.
+arr.toString()
+*/
+var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
+var myVar = monthNames.toString();
+console.log(myVar);                 //"Jan,Feb,Mar,Apr"
+
+
+
+
+
+
+
+
+
 
 
 
