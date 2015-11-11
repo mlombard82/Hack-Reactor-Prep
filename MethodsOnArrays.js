@@ -276,6 +276,20 @@ console.log(myVar4);
 
 
 
+/*
+slice()
+returns a shallow copy of a portion of an array into a new array object.
+arr.slice(begin, end);
+parameters: begin: zero based index at which to begin extraction.
+           As a negative index, begin indicates an offset from the end of the sequence .slice(-2) extracts the
+           last 2 elements in the sequence.
+           if begin is omitted, slice begins from 0.
+           end: zero based index at which to end extraction .slice extracts up to but not including end. 
+           As a negative index, end indicates an offset from the end of the sequence .slice(2, -1) extracts the 
+           third element through the second-to-last element in the sequence. if end is omitted, slice extracts
+           to the end of the sequence(arr.length).
+      
+*/
 
 
 
