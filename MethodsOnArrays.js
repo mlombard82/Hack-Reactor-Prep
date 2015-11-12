@@ -324,6 +324,52 @@ console.log(myVar);                 //"Jan,Feb,Mar,Apr"
 
 
 
+/* indexOf()
+returns the first index at which a given element can be found in the array, or -1 if it is not present.
+arr.indexOf(element, fromIndex)
+parameters: element: the one to locate in the array.
+            fromIndex: the index to start the search at. if the index is greater than or equal to the array's
+            length, -1 is returned, which means that the array will not be searched. Default fromIndex = 0 (entire
+            array will be searched).
+It compares the element we are looking for to elements of the Array using === (strict equality)
+*/
+var array = [2, 5, 9];
+console.log(array.indexOf(2));      // 0
+console.log(array.indexOf(7));      // -1
+console.log(array.indexOf(9, 2));   // 2
+console.log(array.indexOf(2, -1))   // -1
+console.log(array.indexOf(2, -3))   // 0
+
+// finding all the occurrences of an element
+var indices = [];
+var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+var element = 'a';
+var idx = array.indexOf(element);
+while(idx != -1) {
+  indices.push(idx);
+  idx = array.indexOf(element, idx + 1);
+}
+console.log(indices);                      // [0, 2, 4]
+
+// finding if an element exists in the array or not and updating the array
+function updateVegetablesCollection(veggies, veggie){
+  if(veggies.indexOf(veggie === -1)){
+    veggies.push(veggie);
+    console.log('New veggies collection is: ' + veggies);
+  } else if(veggies.indexOf(veggie) > -1){
+        console.log(veggie + ' already exists in the veggies collection.');    
+  }
+}
+
+var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+
+updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, 'spinach');
+
+
+
+
+
 
 
 
