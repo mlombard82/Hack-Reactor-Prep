@@ -326,7 +326,7 @@ console.log(myVar);                 //"Jan,Feb,Mar,Apr"
 
 /* indexOf()
 returns the first index at which a given element can be found in the array, or -1 if it is not present.
-arr.indexOf(element, fromIndex)
+arr.indexOf(element, fromIndex = 0)
 parameters: element: the one to locate in the array.
             fromIndex: the index to start the search at. if the index is greater than or equal to the array's
             length, -1 is returned, which means that the array will not be searched. Default fromIndex = 0 (entire
@@ -365,6 +365,22 @@ var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
 
 updateVegetablesCollection(veggies, 'spinach');
 updateVegetablesCollection(veggies, 'spinach');
+
+
+
+
+
+
+
+/* lastIndexOf()
+returns the last index at which a given element can be found in the array, or -1 if it is not present. 
+The array is searched backwards starting at fromIndex.
+arr.lastIndexOf(element, fromIndex = arr.length - 1)
+parameters: element: the element to locate in the array
+            fromIndex: Optional.index at which to start searching backwards.... 
+*/
+
+
 
 
 
