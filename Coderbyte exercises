@@ -90,7 +90,55 @@ function FirstFactorial(num) {
          
 }
    
-FirstFactorial(4);                            
+FirstFactorial(4);                         
+
+While the above recursive implementation is correct, it may run slowly if you try to calculate the factorial
+of a very large number. One solution to this is memoization. Memoization is a technique used in programming 
+where you store values that take a long time to calculate in a list, which you can then retrieve values from 
+easily later on.
+
+
+
+
+
+--------------------------------- LONGEST WORD
+Description: For this challenge you will be determining the largest word in a string. have the function 
+LongestWord(sen) take the sen parameter being passed and return the largest word in the string.
+If there are two or more words that are the same length, return the first word from the string with that length.
+Ignore punctuation and assume sen will not be empty. 
+
+1. Strip away any punctuation because the challenge tells us to ignore these symbols,
+   so the string "hello$%()" is actually just "hello".
+2. Separate the sentence into a list of words in order to easily retrieve words and their respective lengths.
+3. Then loop through this list and compare the words to find the one with the longest length.
+
+We will be using regular expression functions in order to strip away punctuation and turn the string
+into a list of words. Regular expressions are patterns we define for the program to find in some text.
+
+function LongestWord(sen) { 
+
+  // we use the regex match function which searches the string for the
+  // pattern and returns an array of strings it finds
+  // in our case the pattern we define below returns words with
+  // only the characters a through z and 0 through 9, stripping away punctuation
+  // e.g. "hello$% ##all" becomes [hello, all]
+  var arr = sen.match(/[a-z0-9]+/gi);
+
+  // the array sort function takes a function as a parameter
+  // which is used to compare each element in the array to the
+  // next element in the array
+  var sorted = arr.sort(function(a, b) {
+    return b.length - a.length;
+  });
+
+  // this array now contains all the words in the original
+  // string but in order from longest to shortest length
+  // so we simply return the first element
+  return sorted[0];
+         
+}
+   
+LongestWord("the $$$longest# word is coderbyte");                            
 
 
 
