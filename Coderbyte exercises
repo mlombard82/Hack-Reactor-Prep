@@ -1,1 +1,40 @@
+ /*FIRST REVERSE
+ Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. 
+
+There exist several built-in functions in almost all languages that reverse a string for you very easily, 
+so we'll cover how to first reverse a string manually and then we'll show you how to do it using built-in functions.
+
+A simple way to reverse a string would be to create a new string and fill it with the characters from the original
+string, but backwards. To do this, we need to loop through the original string starting from the end, and every 
+iteration of the loop we move to the previous character in the string. Here is an example:*/
+
+
+function FirstReverse(str) { 
+
+  var newString = "";
+
+  for (var i = str.length - 1; i >= 0; i--) {   
+    // add each character to newString
+    newString = newString + str.charAt(i);
+  }
+
+  return newString;
+         
+}
+   
+FirstReverse("I am a string that needs to be reversed");  
+
+Below is code that shows how to achieve this using built-in string and array functions.
+
+function FirstReverse(str) { 
+
+  // first we split the string which creates an array of characters, e.g. ['c','a','t']
+  // then we call the reverse function on this array 
+  // and finally we turn the reversed array back into a string using the join function
+  return str.split('').reverse().join('');
+         
+}
+   
+FirstReverse("I am a string that needs to be reversed");   
+
 
