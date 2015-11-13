@@ -384,6 +384,16 @@ parameters: element: the element to locate in the array
 
 
 
+ITERATION METHODS: Several methods take as arguments functions to be called back while processing the array. When 
+                  these methods are called, the length of the array is sampled, and any element added beyond this 
+                  length from within the callback is not visited...
+
+
+
+
+
+
+
 
 
 
