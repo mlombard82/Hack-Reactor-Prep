@@ -138,7 +138,116 @@ function LongestWord(sen) {
          
 }
    
-LongestWord("the $$$longest# word is coderbyte");                            
+LongestWord("the $$$longest# word is coderbyte");           
+
+
+
+
+
+
+------------------------------------------ LETTER CHANGES
+For this challenge you will be manipulating characters in a string based off their positions in the alphabet.
+
+Using the JavaScript language, have the function LetterChanges(str) take the str parameter being passed and 
+modify it using the following algorithm. Replace every letter in the string with the letter following it
+in the alphabet (ie. c becomes d, z becomes a). Then capitalize every vowel in this new string (a, e, i, o, u) 
+and finally return this modified string. 
+
+We will be changing the letters by using their respective ASCII values and adding 1 to them in order to get
+the next letter in the alphabet. ASCII values are just numbers that are assigned to each character in a sequential
+order, for example, the ASCII code for the letter a is 97 and b is 98. What we'll do 
+is convert a letter to its ASCII number, add 1 to it, then convert this new number back into a character using
+a built-in character function.
+
+function LetterChanges(str) { 
+
+  // we will replace every letter in the string with the letter following it
+  // by first getting the charCode number of the letter, adding 1 to it, then 
+  // converting this new charCode number to a letter using the fromCharCode function
+  // we also check to see if the character is z and if so we simply convert the z to an a
+  var converted = str.replace(/[a-z]/gi, function(char) { 
+    return (char === 'z' || char === 'Z') ? 'a' : String.fromCharCode(char.charCodeAt() + 1);
+  });
+
+  // we have now successfully converted each letter to the letter following it
+  // in the alphabet, and all we need to do now is capitalize the vowels
+  var capitalized = converted.replace(/a|e|i|o|u/gi, function(vowel) { 
+    return vowel.toUpperCase();
+  });
+
+  // return the final string
+  return capitalized;
+         
+}
+   
+LetterChanges("fun times!"); 
+
+
+
+
+
+
+
+
+--------------------------------------- SIMPLE ADDING
+Description: For this challenge you will be adding up all the numbers from 1 to a certain argument.
+have the function SimpleAdding(num) add up all the numbers from 1 to num.
+
+This challenge requires you to add up all the numbers from 1 to a given argument. For example, if the parameter num
+is 4, your program should add up 1 + 2 + 3 + 4 and return 10. This will be pretty simple to write out as a loop.
+We'll maintain a variable and keep adding to it as we loop from 1 to num.
+
+function SimpleAdding(num) { 
+
+  var answer = 0;
+
+  // loop from 1 to num
+  for (var i = 1; i <= num; i++) {
+    answer = answer + i;
+  } 
+
+  return answer;
+         
+}
+
+SimpleAdding(4);
+
+
+
+
+
+
+
+------------------------------------- LETTER CAPITALIZE
+Description: For this challenge you will be capitalizing certain characters in a string.
+have the function LetterCapitalize(str) take the str parameter being passed and capitalize 
+the first letter of each word. Words will be separated by only one space. 
+
+This challenge requires you to capitalize the first letter of each word.To do this, 
+we'll create an array of words, then loop through each word and capitalize the first letter, and then combine
+these words back into one string. Below is some simple code to accomplish this:
+
+function LetterCapitalize(str) { 
+  
+  // split the string into an array
+  var words = str.split(' ');
+
+  // we split the word into two parts and then combine the parts 
+  // the first part is the first letter which we capitalize and the 
+  // second part is the rest of the string
+  for (var i = 0; i < words.length; i++) {
+    words[i] = words[i].substring(0,1).toUpperCase() + words[i].substring(1);
+  }
+
+  // return the array of words joined into a string
+  return words.join(" ");
+         
+}
+   
+console.log(LetterCapitalize("hello world from coderbyte")); 
+
+There is also another way to solve this challenge by using regular expressions and matching each word in the string
+and changing the first letter
 
 
 
