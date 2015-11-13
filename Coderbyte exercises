@@ -13,7 +13,7 @@ function FirstReverse(str) {
 
   var newString = "";
 
-  for (var i = str.length - 1; i >= 0; i--) {   
+  for (var i = str.length - 1; i >= 0; i--) {    
     // add each character to newString
     newString = newString + str.charAt(i);
   }
@@ -36,5 +36,61 @@ function FirstReverse(str) {
 }
    
 FirstReverse("I am a string that needs to be reversed");   
+
+
+
+
+
+
+----------------------------------FIRST FACTORIAL
+Using the JavaScript language, have the function FirstFactorial(num) take the num parameter being passed
+and return the factorial of it (ie. if num = 4, return (4 * 3 * 2 * 1)). For the test cases, the range will be 
+between 1 and 18.
+
+In the code below, we create a new variable called factorial which we will use to store our temporary values 
+as we loop. In our loop, we start at 1 and increment until we reach our variable num.
+
+function FirstFactorial(num) { 
+
+  var factorial = 1;
+
+  for (var i = 1; i <= num; i++) {  
+    // multiply each number between 1 and num  
+    // factorial = 1 * 1 = 1
+    // factorial = 1 * 2 = 2
+    // factorial = 2 * 3 = 6
+    // factorial = 6 * 4 = 24
+    // ...
+    factorial = factorial * i;
+  }
+
+  return factorial;
+         
+}
+   
+FirstFactorial(4);    
+
+
+It is also possible to create a recursive function to calculate the factorial.
+
+function FirstFactorial(num) { 
+
+  // our factorial function
+  function factorial(n) { 
+ 
+    // terminate the recursion once we hit zero
+    if (n===0) { return 1; }
+
+    // otherwise keep calling the function recursively 
+    else { return factorial(n-1) * n; }
+
+  }
+
+  return factorial(num);
+         
+}
+   
+FirstFactorial(4);                            
+
 
 
