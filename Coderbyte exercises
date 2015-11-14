@@ -333,9 +333,168 @@ console.log(TimeConvert(124));
  the letters in alphabetical order (ie. hello becomes ehllo). Assume numbers and punctuation symbols will not be
  included in the string.
  
+ function AlphabetSoup(str) { 
+
+  // convert the string into an array of characters
+  var chars = str.split("");
+
+  // sort the array in alphabetical order
+  var sorted = chars.sort();
+
+  // return the newly sorted string
+  return sorted.join("");
+         
+}
+   
+console.log(AlphabetSoup("coderbyte"));
 
 
 
+
+
+
+-------------------------------------- AB CHECK
+Description: For this challenge you will determine if two characters are separated a specific way in the string.
+
+Using the JavaScript language, have the function ABCheck(str) take the str parameter being passed and return 
+the string true if the characters a and b are separated by exactly 3 places anywhere in the string 
+at least once (ie. "lane borrowed" would result in true because there is exactly three characters between a and b).
+Otherwise return the string false. 
+
+function ABCheck(str) { 
+
+  // convert the whole string to lowercase letters
+  var str = str.toLowerCase();
+
+  // loop through the string
+  for (var i = 0; i < str.length; i++) {
+  
+    // check for "a...b"
+    if (str[i] === 'a' && str[i+4] === 'b') { return true; }
+
+    // check for "b...a"
+    if (str[i] === 'b' && str[i+4] === 'a') { return true; }
+
+    // NOTE: in JavaScript we don't have to worry about out-of-bounds errors
+    // because it just returns undefined and the program keeps running
+
+  }
+
+  // if none of above were encountered
+  // then return false by default
+  return false;
+         
+}
+   
+console.log(ABCheck("Laura sobs"));
+
+
+
+
+
+
+------------------------------------- VOWEL COUNT
+Description: For this challenge you will be counting all the vowels in a string.
+have the function VowelCount(str) take the str string parameter being passed and return the number of vowels
+the string contains (ie. "All cows eat grass" would return 5). Do not count y as a vowel for this challenge. 
+
+function VowelCount(str) { 
+
+  // convert the string to all lowercase characters
+  var str = str.toLowerCase();
+
+  // possible vowels
+  var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  // where we store our vowel count
+  var count = 0;
+
+  // loop through string checking each character
+  for (var i = 0; i < str.length; i++) { 
+
+    // if this character is found in vowels array
+    // then the character is a vowel and we add 1 to count
+    if (vowels.indexOf(str[i]) !== -1) {
+      count = count + 1
+    }
+
+  }
+
+  // return the number of vowels found
+  return count;
+         
+}
+   
+VowelCount("All cows eat grass"); 
+
+
+
+
+
+
+
+
+--------------------------------- WORD COUNT
+Description: For this challenge you will be determining how many words a sentence contains.
+have the function WordCount(str) take the str string parameter being passed and return the number of words
+the string contains (ie. "Never eat shredded wheat" would return 4). Words will be separated by single spaces. 
+
+This challenge requires you to return the number of words in a string. This is a very simple problem that
+we can solve in one line by splitting the string up into an array. 
+
+
+function WordCount(str) { 
+
+  // we simply split the string into an array
+  // with the separator being the spaces
+  return str.split(" ").length;
+         
+}
+WordCount("I am 4 words");
+
+
+
+
+
+
+
+
+------------------------------------- EX OH
+Description: For this challenge you will traverse a string and determine if there is an equal amount
+of certain characters.
+have the function ExOh(str) take the str parameter being passed and return the string true if there is
+an equal number of x's and o's, otherwise return the string false. Only these two letters will be entered
+in the string, no punctuation or numbers. For example: if str is "xooxxxxooxo" then the output should return false
+because there are 6 x's and 5 o's. 
+
+This challenge requires you to determine if the number of x's in the string is equal to the number of o's.
+For example, if the string were "xoox" then your program should return the string true. There are several ways
+to solve this challenge, but we'll cover the most basic way first.
+
+function WordCount(str) { 
+
+  // split the string into an array
+  var arr = str.split("");
+
+  // create a new array of x's by using the filter function
+  // which takes a test function with 3 parameters:
+  // the element, its index, and the array it came from
+  // and if the test passes it adds this element to the new array
+  var x = arr.filter(function(elem, index, self) { 
+    return elem === 'x';
+  });
+
+  // because we know the string can only contains x's and o's
+  // we can subtract the length of our new array of x's from 
+  // arr and that will leave us with the number of o's
+  var o = arr.length - x.length;
+
+  // see if their lengths are equal
+  return x.length === o;
+         
+}
+   
+console.log(WordCount("xooox")); 
 
 
 
