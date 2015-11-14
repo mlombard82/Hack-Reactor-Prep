@@ -464,12 +464,7 @@ Description: For this challenge you will traverse a string and determine if ther
 of certain characters.
 have the function ExOh(str) take the str parameter being passed and return the string true if there is
 an equal number of x's and o's, otherwise return the string false. Only these two letters will be entered
-in the string, no punctuation or numbers. For example: if str is "xooxxxxooxo" then the output should return false
-because there are 6 x's and 5 o's. 
-
-This challenge requires you to determine if the number of x's in the string is equal to the number of o's.
-For example, if the string were "xoox" then your program should return the string true. There are several ways
-to solve this challenge, but we'll cover the most basic way first.
+in the string, no punctuation or numbers. 
 
 function WordCount(str) { 
 
@@ -498,3 +493,122 @@ console.log(WordCount("xooox"));
 
 
 
+
+
+
+
+
+------------------------------------ PALINDROME
+Description: For this challenge you will determine if a string is written the same way forward and backwards.
+have the function Palindrome(str) take the str parameter being passed and return the string true if the
+parameter is a palindrome, (the string is the same forward as it is backward) otherwise return the string false. 
+For example: "racecar" is also "racecar" backwards. Punctuation and numbers will not be part of the string. 
+
+function Palindrome(str) { 
+
+  // first we'll get rid of spaces and make the characters 
+  // all lowercase to make it easier to work with
+  var str = str.split(" ").join("").toLowerCase();
+
+  // we wrote this reverse code in a previous solution
+  var rev = str.split('').reverse().join('');
+
+  // now it's very easy to check if a string is a palindrome
+  return str === rev;
+         
+}
+   
+Palindrome("Never odd or even");   
+
+
+
+
+
+
+
+
+
+------------------------------- ARITH GEO
+Description: For this challenge you will determine if numbers within an array follow an arithmetic
+or geometric sequence.
+have the function ArithGeo(arr) take the array of numbers stored in arr and return the string "Arithmetic" 
+if the sequence follows an arithmetic pattern or return "Geometric" if it follows a geometric pattern.
+If the sequence doesn't follow either pattern return -1. An arithmetic sequence is one where the difference between
+each of the numbers is consistent, where as in a geometric sequence, each term after the first is multiplied
+by some constant or common ratio. Arithmetic example: [2, 4, 6, 8] and Geometric example: [2, 6, 18, 54]. 
+Negative numbers may be entered as parameters, 0 will not be entered, and no array will contain all the same elements. 
+
+This challenge requires you to determine if the integers in an array follow either an arithmetic or geometric
+sequence. An arithmetic sequence is one where the difference between each successive pair of integers is constant,
+for example in the array [2, 4, 6, 8] the difference between the integers is always 2. A geometric sequence is one
+where each element in the array is the product of the previous integer multiplied by some constant or ratio,
+for example in the array [3, 9, 27, 81] each element is a result of the previous element multiplied by 3.
+
+A simple solution to this challenge involves checking the difference between each pair of integers.
+function ArithGeo(arr) { 
+
+  // this function will loop through the provided array
+  // checking to see if the difference provided matches
+  // every element-pair difference in the array
+  function arrayDiffs(diff, arr, subtract) {
+
+    // loop starting from i=2 and check if every difference is the same
+    for (var i = 2; i < arr.length; i++) { 
+
+      // store the temporary difference 
+      var tempDiff = (subtract) ? arr[i] - arr[i-1] : arr[i] / arr[i-1];
+
+      // if differences do not match return false
+      if (tempDiff !== diff) { return false; }
+
+      // if we reach the end of the array and all differences matched, return true
+      else if (i === arr.length-1 && tempDiff === diff) { return true; }
+
+    }
+
+  }
+
+  // store the first difference for a potential arithmetic sequence
+  var diffArith = arr[1] - arr[0];
+
+  // store the first difference for a potential geometric sequence
+  var diffGeo = arr[1] / arr[0];
+
+  // check the whole array for an arithmetic sequence
+  var isArithSeq = arrayDiffs(diffArith, arr, true);
+  
+  // if not an arithmetic sequence, check for geometric sequence
+  if (!isArithSeq) {
+
+    var isGeoSeq = arrayDiffs(diffGeo, arr, false);
+    return (isGeoSeq) ? "Geometric" : -1;
+
+  } else {
+
+    return "Arithmetic";
+
+  }
+         
+}
+   
+ArithGeo([3, 9, 27, 81]);  
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------- ARRAY ADDITION 1
+Description: For this challenge you will determine if numbers in an array can add up to a certain number in the array.
+
+have the function ArrayAdditionI(arr) take the array of numbers stored in arr and return the string true 
+if any combination of numbers in the array can be added up to equal the largest number in the array, otherwise 
+return the string false. For example: if arr contains [4, 6, 23, 10, 1, 3] the output should return true 
+because 4 + 6 + 10 + 3 = 23. The array will not be empty, will not contain all the same elements, and may contain
+negative numbers. 
