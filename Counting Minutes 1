@@ -1,0 +1,69 @@
+For this challenge you will return the total number of minutes between two times.
+have the function CountingMinutesI(str) take the str parameter being passed which will be two times (each properly
+formatted with a colon and am or pm) separated by a hyphen and return the total number of minutes between
+the two times. The time will be in a 12 hour clock format. For example: if str is 9:00am-10:00am then the output
+should be 60. If str is 1:00pm-11:00am the output should be 1320. 
+
+1.
+function CountingMinutesI(str) {
+  var m = str.match(/\d+|am|pm/gi);
+
+  var h0 = parseInt(m[0]);
+  var m0 = parseInt(m[1]);
+  if (h0 !== 12 && m[2] === 'am') {
+    h0 += 12;
+  } else if (h0 === 12 && m[2] === 'pm') {
+    h0 = 0;
+  }
+
+  var h1 = parseInt(m[3]);
+  var m1 = parseInt(m[4]);
+  if (h1 !== 12 && m[5] === 'am') {
+    h1 += 12;
+  } else if (h1 === 12 && m[5] === 'pm') {
+    h1 = 0;
+  }
+
+  return ((h1 - h0) * 60 + m1 - m0 + 1440) % 1440;
+}
+
+console.log(CountingMinutesI("1:00pm-11:00am"));
+
+
+
+
+
+
+2.
+function CountingMinutesI(str) { 
+  var times = str.split("-");
+  var time1 = times[0].slice(0,times[0].length-2).split(":");
+  var time1ap = times[0][times[0].length-2];
+  var time2 = times[1].slice(0,times[1].length-2).split(":");
+  var time2ap = times[1][times[1].length-2];
+  var time1min = parseInt(time1[0]) * 60 + parseInt(time1[1]);
+  var time2min = parseInt(time2[0]) * 60 + parseInt(time2[1]);
+  
+  if (time1ap === "p" && time1[0] !== "12") {
+    time1min += 12 * 60;
+  }
+  if (time2ap === "p" && time2[0] !== "12") {
+    time2min += 12 * 60;
+  }
+  
+  if (time1ap === "a" && time1[0] === "12") {
+    time1min -= (12 * 60);
+  }
+  if (time2ap === "a" && time2[0] === "12") {
+    time2min -= (12 * 60);
+  }
+  
+  if (time1min > time2min) {
+    return ((24 * 60) - time1min) + time2min;
+  } else {
+    return time2min - time1min;
+  }
+         
+}
+
+console.log(CountingMinutesI("1:00pm-11:00am"));
