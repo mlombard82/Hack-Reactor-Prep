@@ -1,0 +1,109 @@
+ For this challenge you will be manipulating a string using dashes (-).
+ have the function DashInsert(str) insert dashes ('-') between each two odd numbers in str.
+ For example: if str is 454793 the output should be 4547-9-3. Don't count zero as an odd number. 
+ 
+ To solve this challenge, we'll loop through the string checking if the current number is odd and if the next number
+ is odd as well. To check if a number is odd we'll use the modulo function which returns the remainder after
+ a division operation.
+ 
+ 1. CODERBYTE SOLUTION
+ function DashInsert(str) { 
+
+  // convert the string into an array
+  // with each element being a single number
+  var arr = str.split('');
+  
+  // loop through the array of numbers and add a dash if 
+  // the current number and the next number are odd
+  // NOTE: to determine if a number is odd we  
+  // divide by 2 and check if there is a remainder
+  // e.g. 4 / 2 = 0 remainder
+  // e.g. 5 / 2 = 1 remainder
+  // e.g. 9 / 2 = 1 remainder
+  for (var i = 0; i < str.length-1; i++) {
+    if (arr[i] % 2 !== 0 && arr[i+1] % 2 !== 0) {
+      arr[i] = arr[i] + '-';
+    }
+  }
+  
+  // join the numbers into a final string
+  return arr.join('');
+         
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+console.log(DashInsert("13568999")); 
+
+
+
+
+
+
+
+
+2.
+function DashInsert(num) {
+
+    // First, we convert the input number into a string 
+    // This allows us to add the character to our answer rather than summing the two. 
+    num = num.toString();
+    // Next, we declare and initialize a variable to hold our answer string.
+    var answer = "";
+
+    // After that, we loop through each character in our input number...
+    for (var i = 0; i < num.length; i++) {
+        // ...and for every character after the first, we check if the current and previous character are odd.
+        if ((i > 0) && (num[i] % 2 === 1) && (num[i - 1] % 2 === 1)) {
+            // If both are, we add a dash to our answer.
+            answer += "-";
+        }
+        // No matter whether or not we add a dash, we add the current number to our answer string.
+        answer += num[i];
+    }
+
+    // Finally, we return our answer.
+    return answer;
+}
+console.log(DashInsert("13568999")); 
+
+
+
+
+
+
+3.
+function DashInsert(num) {
+  var arr = (num + '').split('');
+  var output = [];
+  for (var i = 0; i < arr.length - 1; i++) {
+    output.push(arr[i]);
+    if (/[13579]/g.test(arr[i]) && /[13579]/g.test(arr[i + 1])) {
+      output.push('-');
+    }
+  }
+  output.push(arr[arr.length - 1]);
+  return output.join('');
+}
+console.log(DashInsert("13568999")); 
+
+
+
+
+
+
+
+4. 
+function DashInsert(num) {
+  var num = num.toString()                      //convert the number to a string
+               .split("");                      //split the string into an array of characters
+  var result = [];                              //create an empty array to hold our modified values
+  for(var i = 0; i < num.length; i++) {         //loop through our number array
+    result.push(num[i]);                        //add each number to our result array
+    if(num[i] % 2 !== 0 && num[i+1] % 2 === 1){ //check to see if the current number and then next number are odd
+      result.push("-");                         //push a dash if they are both odd so there is a dash between the two
+    }
+  }               
+  return result.join("");                       //join the result array together into a string and return it        
+}
+console.log(DashInsert("13568999")); 
