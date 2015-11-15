@@ -1,0 +1,87 @@
+Description: For this challenge you will be swapping the case of each character in the string.
+have the function SwapCase(str) take the str parameter and swap the case of each character. 
+For example: if str is "Hello World" the output should be hELLO wORLD. Let numbers and symbols stay the way they are.
+
+1.CODERBYTE SOLUTION
+function SwapCase(str) { 
+
+  // turn the string into an array of characters
+  var chars = str.split('');
+  
+  // loop through the array swapping letter cases
+  // uppercase -> lowercase
+  // lowercase -> uppercase
+  for (var i = 0; i < chars.length; i++) {
+    if (chars[i] === chars[i].toUpperCase()) { 
+      chars[i] = chars[i].toLowerCase();
+    }
+    else if (chars[i] === chars[i].toLowerCase()) { 
+      chars[i] = chars[i].toUpperCase();
+    }
+  }
+  
+  // return the modified array of characters joined as a string
+  return chars.join('');
+         
+}
+   
+console.log(SwapCase("Hello World")); 
+
+
+
+
+
+2.
+function SwapCase(str) {
+
+    var answer = "";
+
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === str[i].toUpperCase()) {
+            answer += str[i].toLowerCase();
+        } else if (str[i] === str[i].toLowerCase()) {
+            answer += str[i].toUpperCase();
+        } else {
+            answer += str[i];
+        }
+    }
+
+    return answer;
+}
+   
+console.log(SwapCase("Hello World")); 
+
+
+
+
+3.
+function SwapCase(str) {
+  var arr = str.split('');
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charCodeAt() < 97 ? arr[i].toLowerCase() : arr[i].toUpperCase();
+  }
+  return arr.join('');
+}
+   
+console.log(SwapCase("Hello World")); 
+
+
+
+
+
+4.
+function SwapCase(str) { 
+  var result = [];                              //our results array to hold transformed values
+  for(var i = 0; i < str.length; i++) {         //for loop to look through the whole string
+    if(str[i] === str[i].toUpperCase()){        //check to see if the character is uppercase
+      result.push(str[i].toLowerCase());        //if so, make it lowercase and add it to results array
+    } else if(str[i] === str[i].toLowerCase()){ //check to see if the character is lowercase
+      result.push(str[i].toUpperCase());        //if so, make it upperrcase and add it to results array
+    } else {
+      result.push(str[i]);                      //default case for nonalpha characters
+    }
+  }
+  return result.join("");                       //join the array back into a string and return it       
+}
+   
+console.log(SwapCase("Hello World")); 
