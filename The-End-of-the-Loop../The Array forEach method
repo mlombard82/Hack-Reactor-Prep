@@ -1,0 +1,81 @@
+function getStockSymbols (stocks){
+  var symbols = [],
+      counter,
+      stock;
+  
+  stocks.forEach(function(stock){
+    symbols.push(stock.symbol);
+  })
+  
+  /*
+  for (counter = 0; counter < stocks.length; counter++){
+    stock = stocks[counter];
+    symbols.push(stock.symbol);
+  }
+  */
+  
+  return symbols;
+}
+ 
+var symbols = getStockSymbols([
+  {symbol:"XFX", price:240.22, volume:23432},
+  {symbol:"TNZ", price:332.19, volume:234},
+  {symbol:"JXJ", price:120.22, volume:5323},
+]);
+
+console.log(JSON.stringify(symbols));
+
+Most JavaScript developers are familiar with the for loop. One of the most common uses of the for loop is to iterate
+through the items in an array. In this lesson, we will learn how to replace the for loop with the
+Array's forEach method - and shorten your code in the process.
+
+Hey, and welcome to the, "forEach" lesson. Today, we're going to be learning about the array's forEach method,
+and we're going to create an exercise that is going to help us learn about the forEach method. Let's say that we're
+building an application that displays a list of stock symbols.
+
+What we are going to do is, we're going to pretend that we are retrieving a bunch of stock information from a server,
+and we want to print out just the symbols of those stocks so that people can select them and then get more detail
+about them. What we're going to do is, we're going to write a function called, "get stock symbols."
+
+It's going to accept an array of stock records. The way we're going to call this function is, we are going to get
+just the symbols out of getStockSymbols, and pass in a bunch of stocks. You can see, this is an array of stocks
+where each stock is a symbol, a price and volume.
+
+How are we going to do this? Well, most JS developers are familiar with the "for" loop, so we're going
+to use the for loop to move overall the stocks, pull out the symbol from each stock, accumulated in an array and
+return that array. First we're going to create the symbols array, which is an empty array that is going to store
+all our symbols. Next we're going to create a couple of variables which we are going to use in the for loop.
+
+The first is a counter, which keeps track of the current index in the array, and the next is a stock, 
+which will keep track of the current stock in the array. Most JS developers are familiar with the for loop.
+The way the for loop works is it's in three parts, the first statement is what we want to execute the very first
+time the for loop is executed. In this case, we're going to initialize the counter to zero, which will point
+to the first index in the array.
+
+The second part of the for loop is the condition that we want to be true, as long as we want the for loop to be
+continued. In this case, we want the for loop to continue as long as the counter is smaller than the length of 
+the stocks. Finally, this third part of the for loop is what we want to execute at the bottom of each iteration 
+through the loop. In this case, we want to increment the counter.
+
+What we're going to do inside of the loop is we're going to assign the stock to the stock inside of the collection
+at the index of the counter. So, stocks[counter];. What we're doing now is we're looping through each item
+in the stocks array and assigning it to a variable stock. Now what we'll do is, we'll add to the symbols array.
+
+We're going to pull out the symbol from the stock, and add it to the symbols array. Now, what we've essentially
+done is we've gone through all the stocks, pulled out the symbol and then put that into a new array of just
+the symbols of each stock. Finally, we will return the array. And now, to confirm that that worked, we're going
+to log to the console, the symbols array that we get when we call, "get stock symbols."
+
+I'm going to call JSON stringify, pass in symbols, and we'll run it. Lo and behold, it works. We get just the symbol
+FSX, TNZ and JXJ. Now, most JavaScript developers are familiar with the for loop, but in this lesson, I'm going to
+teach you about the arrays forEach method. We can use the "forEach" method to dramatically simplify this code.
+
+Now, the most important thing is not the lines of code, but as we'll learn later, the forEach method because unlike
+the for loop, it can also run asynchronously. Here, I'm going to delete this counter and stock variable, 
+and I'm going to replace this for loop with a call to the forEach method of stocks. The way the forEach method works
+is that it accepts a closure, and it invokes that closure for every item in the array and passes in that item as
+an argument to the closure.
+
+And so now, we can see that all I have to do is go symbols, push stock, symbol, and the code here is completely
+equivalent to this code below. I'm going to delete this code below, and we're going to see that the exact same
+result occurs...
