@@ -1,0 +1,46 @@
+One very common operation in programming is to iterate through an Array's contents, apply a function to each item,
+and create a new array containing the results. For example, let's say you wanted to loop through an array of stock
+objects and select only the name for display on screen. In this lesson we will demonstrate how to use
+the Array's map method to easily perform this operation with less code than a loop would require.
+
+//code
+
+
+In the previous video, we learned about the Array's forEach method. The Array's forEach method is really convenient
+if you want to do something to every item in an Array. Let's take another look at our example here.
+
+The getStockSymbols function, its job is to accept an Array of stocks, pull out the symbol from each one of those
+stocks, and put all of the symbols in an Array and then return it. It turns out that this process of applying
+some transformation to every item in an Array and then creating an Array to hold all of the results is very common.
+
+The Array has a map method that we can use to make this code even shorter. Instead of just using the Array's
+map method, we're actually going to define it inline, right here, for you so that you can see how it works.
+
+The Array's map method is similar to forEach in that it accepts a function. We're going to call this a "projection
+function." The whole job of this projection function is just to transform the item in the Array into something else.
+
+I'm going to write, almost identical, the code above. What we're going to do, the map function is going to create 
+an Array to hold all of the results. This line of code right here is pretty much equivalent to this line of code.
+
+In both cases, we need an Array to store the results. Then we're going to use forEach once again. Except this time,
+I'm going to call this.forEach. The reason why I call this.forEach is that the map method is actually being added
+to the Array itself. THIS, in the context of this function, is an Array.
+
+I'm going to accept, this closure is going to accept each item in the Array. Then we're going to apply the
+projection function to the item and add the result to the results Array. Finally, we'll return the results.
+
+I want you to notice how this piece of code and this piece of code are very, very similar. There's obviously
+a pattern here where we create an Array to hold all the results. We use forEach to translate each of the items
+in the Array. Then we collect up the results into a new Array and then return them.
+
+Now, using the Array's map method below, I can comment out this code and rewrite it in a much more terse way. 
+I'm just going to write "stocks.map." I'm going to pass in my projection function, which is going to get passed
+each stock in the Array. I'm just going to return the stock's symbol.
+
+If we run this code right now, we'll see that we get the exact same result. I'm going to go ahead and remove 
+the code that we commented out. Because when I defined this map function I was actually just overriding
+the map function that's already on the Array, which will do precisely this, I can delete this too.
+
+If we do nothing but this and we run, we see once again we get the exact same value. Now we know how map works.
+Just like forEach, the great thing about map over using a simple for loop is that it will work not only on data
+that's in memory in an Array. We'll also learn later that it can work on data that arrives asynchronously over time.
