@@ -1,0 +1,63 @@
+Description: For this challenge you will determine if string 1 can be rearranged into string 2.
+have the function StringScramble(str1,str2) take both parameters being passed and return the string true
+if a portion of str1 characters can be rearranged to match str2, otherwise return the string false. 
+For example: if str1 is "rkqodlw" and str2 is "world" the output should return true. 
+Punctuation and symbols will not be entered with the parameters. 
+
+1.
+function StringScramble(str1,str2) { 
+
+  for (i=0;i<str2.length;i++) {
+       if (str1.indexOf(str2[i]) === -1) {
+       return false;
+       }
+       else {
+       str1 = str1.replace(str2[i], "");
+       }
+  }
+  
+  return true;
+         
+}
+
+console.log(StringScramble("rkqodlw", "world"));
+
+
+
+
+
+
+
+2.
+function StringScramble(str1,str2) {
+
+  for (var i = 0; i < str2.length; i++) {
+    if (str1.indexOf(str2[i]) == -1) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(StringScramble("rkqodlw", "world"));
+
+
+
+
+
+
+
+
+3.
+function StringScramble(str1, str2) {
+  for (var i = 0; i < str2.length; i++) {
+    var l1 = (str1.match(new RegExp(str2[i], 'g')) || []).length;
+    var l2 = (str2.match(new RegExp(str2[i], 'g')) || []).length;
+    if (l1 < l2) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(StringScramble("rkqodlw", "world"));
