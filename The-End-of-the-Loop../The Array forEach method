@@ -1,8 +1,9 @@
 function getStockSymbols (stocks){
-  var symbols = [],
+  var symbols = [];
+      /*
       counter,
       stock;
-  
+  */
   stocks.forEach(function(stock){
     symbols.push(stock.symbol);
   })
