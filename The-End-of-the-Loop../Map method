@@ -3,7 +3,7 @@ and create a new array containing the results. For example, let's say you wanted
 objects and select only the name for display on screen. In this lesson we will demonstrate how to use
 the Array's map method to easily perform this operation with less code than a loop would require.
 
-//code
+
 
 
 In the previous video, we learned about the Array's forEach method. The Array's forEach method is really convenient
