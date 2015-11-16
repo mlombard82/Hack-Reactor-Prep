@@ -3,7 +3,40 @@ and create a new array containing the results. For example, let's say you wanted
 objects and select only the name for display on screen. In this lesson we will demonstrate how to use
 the Array's map method to easily perform this operation with less code than a loop would require.
 
+function getStockSymbols (stocks){
+  return stocks.map(function(stock){
+    return stock.symbol;
+  })
+  /*
+  var symbols = [];
+  
+  stocks.forEach(function(stock){
+    symbols.push(stock.symbol);
+  })
+  
+  return symbols;
+  */
+}
 
+/*
+Array.prototype.map = function(projection){
+  var results = [];
+  
+  this.forEach(function(item){
+    results.push(projection(item))
+  });
+  
+  return results;
+};
+ */
+
+var symbols = getStockSymbols([
+  {symbol:"XFX", price:240.22, volume:23432},
+  {symbol:"TNZ", price:332.19, volume:234},
+  {symbol:"JXJ", price:120.22, volume:5323},
+]);
+
+console.log(JSON.stringify(symbols));
 
 
 In the previous video, we learned about the Array's forEach method. The Array's forEach method is really convenient
