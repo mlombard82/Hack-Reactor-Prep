@@ -1,0 +1,69 @@
+One very common operation in programming is to iterate through an Array's contents, apply a test function
+to each item, and create a new array containing only those items the passed the test. For example, let's say you
+wanted to loop through an array of stocks and select only those with the price larger than a certain value. 
+In this lesson we will demonstrate how to use the Array's filter method to easily perform this operation with 
+less code than a loop would require.
+
+//code
+
+
+In the previous video, we learned about the Array's map function. The Array's map function is great if you want
+to apply some transformation to every item in an Array and collect up the results in a new Array. Now, sometimes
+map isn't good enough.
+
+Sometimes what you'd like to do is filter the items in an Array, returning only those items that match a certain 
+test. Let's keep going with the stocks example that we've set up thus far.
+
+Let's imagine that we want to create a function called "getStocksOver" which accepts an Array of stocks,
+a minimum price, and then returns only those stocks with a price larger than or equal to that minimum price.
+
+What we'll do is we will run getStocksOver which will return a new Array containing only those stocks that are
+expensive, will pass in an Array of stocks, and then a minimum price, let's say $150. Then we're going to log 
+the expensiveStocks to the console.
+
+In order to make this function run, we're going to use the forEach function that we learned about earlier. 
+First, we're going to create a new Array to hold all of the results, those stocks with a price larger than or equal
+to the minimum price, and we're going to use the forEach method on the stocks' Array.
+
+Remember, the forEach method accepts a function which it calls once for each stock in the Array. 
+All we're going to do, this forEach function gives us the opportunity to run some operation for each stock
+in that Array.
+
+That operation we're going to run is we're going to check to see if the stock's price is larger than or equal to
+the minimum price and, if so, we're going to add it to the results Array. Finally, getStocksOver is going to return
+its results Array.
+
+I want you to notice that getStocksOver doesn't modify the stock's Array, it just creates a new Array, adds only
+those stocks that match the test to that Array and then finally returns it. If we run this, we should see only
+two stocks, XFX and TNZ, both of which have prices larger than or equal to $150. Sure enough, we see it.
+
+It turns out that this operation, this filtering operation, is really common. That's why the ArrayObject has
+a special filter method custom designed to do exactly this, apply a test to each item in an Array and create 
+a new Array containing only those items that pass the test.
+
+Array already has a filter method, but I'm going to go ahead and redefine it here so that we can see how it works.
+We're going to add a filter method to the ArrayObject. The filter method accepts a function called a predicate.
+A predicate is really simple. All it is is a function that accepts a value and returns true or false.
+
+We're going to see that this structure, this code, is going to mimic the operation that we're doing in getStocksOver.
+First, we're going to create a results Array. We're going to use this to accumulate up those items that pass that test.
+Then we're going to call forEach on THIS. Now, notice that THIS, in this context, is actually the Array because
+this filters a method on Array.
+
+We're going to use this forEach to run an operation on every item in the Array. Now, what we're going to do is
+we're going to apply the predicate function to the item and if it returns true, we're going to add it to the results.
+We're not going to translate the item like we did in map. We're just going to add it exactly as it is.
+
+Finally, all the filter function needs to do is return the new Array of the filtered results. Now, we can use 
+this filter function to replace all this code with something much, much shorter. I can simply go return stocks filter.
+We pass in the predicate function. The predicate function gets passed the current stock, and it returns true or false
+depending on whether we want to keep a stock or not. Now, in order to decide if we want to keep a stock,
+we're going to compare the price to the min price and if true, it's going to end up in the results.
+
+Here, if I run this, we should see the exact same result. Sure enough we do. Only XFX and TNZ are included.
+I can go ahead and delete this code right here because, as I said, this filter method already exists on the Array.
+All we've done is redefine it so that we can see how it works. If I delete this and run it again, we'll still see
+that we get the exact same result.
+
+In summation, filter is great if you want to apply a test function to every item in Array and create a new Array
+containing only those items that pass the test.
