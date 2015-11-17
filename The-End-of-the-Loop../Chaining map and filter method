@@ -1,0 +1,49 @@
+Both map and filter do not modify the array. Instead they return a new array of the results. Because both map
+and filter return Arrays, we can chain these functions together to build complex array transformations with
+very little code. Finally we can consume the newly created array using forEach. In this lesson, we will learn
+how to build nontrivial programs without using any loops at all.
+
+//code
+
+...learned about the arrays forEach method, map method, and filter method, we can see that we can combine these
+methods together to write some pretty complex programs, all without ever using a loop. Just as a reminder,
+the reason why we're learning to build complex programs without loops is that loops only work on data that is
+synchronously available, like, for example, data sitting somewhere in memory.
+
+However, loops are no good to us when we're trying to work with data that's arriving asynchronously like with events.
+By learning the forEach, map, and filter method we're going to learn how we can build programs that work regardless
+of whether the data is arriving asynchronously like from event or we're pulling it out of an in-memory data
+structure like an array.
+
+Now that we know these three methods we can learn how to combine them together to write some pretty complex 
+programs. First I'm going to start by creating an array of stocks. What I'd like to do is print the symbols of 
+those stocks with a price larger than or equal to 150.
+
+Both map and filter would be ideal for this. First we can use filter to create a new collection containing only
+those stocks with a price larger than or equal to 150. Then we're going to follow up by using a map operation
+to pull out the symbols from each of those stocks with a price larger than or equal to 150.
+
+Both map and filter don't change arrays. They create new arrays. We're going to create a new list of filtered stock
+symbols. We are going to start with stocks. First we're going to run the filter operation. Now filter accepts
+a predicate function. The whole idea, remember, a predicate function is just a test function. It's just a function
+that accepts an item and returns true or false.
+
+If a function returns true for a given item, filter will put it into the list of new filtered results. We'd like
+to keep this stock in the new list of filtered results if the stock's price is larger than or equal to 150.
+Now instead of just filtering the collection of stocks, we'd also like to pull out only the symbols from each
+of those stocks.
+
+Map is great for translating each item into an array into a new value and then creating a collection of just
+those values. Here in this function this is called a projection function because it transforms a value that comes
+in into a new value.
+
+What we're going to do is pull out the symbol for that given stock. If we go ahead and consume each of the items
+in this new filtered stock symbols using forEach, what we'd like is for each one of the new symbols in the filtered
+StockSymbols array, we'd like to just print it to the console.
+
+We're going to use filteredStockSymbols forEach method. It will accept the stock symbol. We'll go ahead and log that
+out to the console and run it. We should see only XFX and TNZ because those are the two symbols of the only stocks
+with prices larger than or equal to 150.
+
+
+
