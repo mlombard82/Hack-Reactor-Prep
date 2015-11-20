@@ -1,0 +1,10 @@
+Reverses an array in place. the first array element becomes the last and the last becomes the first.
+
+syntax: arr.reverse()
+
+no parameters.
+
+var myArray = ['one', 'two', 'three'];
+myArray.reverse();
+console.log(myArray);
+// ["three", "two", "one"]
