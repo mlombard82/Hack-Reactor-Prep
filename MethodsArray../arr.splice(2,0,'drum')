@@ -1,0 +1,29 @@
+Changes the content of an array by removing existing elements and/or adding new elements.
+
+array.splice(start, deleteCount[...[..]])
+
+parameters: start: index at which to start changing the array. if negative, will begin that many elements from the end.
+deleteCount: An integer indicating the number of old array elements to remove.
+itemN: elements to add to the array. if you don's specify any elements, splice() will only remove.
+
+returns: an array containing the deleted elements.
+
+note: of course, if you specify a different number of elements to insert than the number you are removing,
+the array will have a different length at the end of the call.
+
+var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+var removed = myFish.splice(2,0,'drum');
+console.log(myFish);
+console.log(removed);
+removed = myFish.splice(3, 1);
+console.log(myFish);
+console.log(removed);
+removed = myFish.splice(2, 1, 'trumpet');
+console.log(myFish);
+console.log(removed);
+removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+console.log(myFish);
+console.log(removed);
+removed = myFish.splice(3, myFish.length);
+console.log(myFish);
+console.log(removed);
