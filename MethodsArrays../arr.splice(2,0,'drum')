@@ -8,7 +8,7 @@ itemN: elements to add to the array. if you don's specify any elements, splice()
 
 returns: an array containing the deleted elements.
 
-note: of course, if you specify a different number of elements to insert than the number you are removing,
+Note: of course, if you specify a different number of elements to insert than the number you are removing,
 the array will have a different length at the end of the call.
 
 var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
