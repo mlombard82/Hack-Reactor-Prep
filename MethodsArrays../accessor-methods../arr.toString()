@@ -1,0 +1,6 @@
+returns a string containing each array element separated by commas.
+arr.toString()
+
+var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
+var myVar = monthNames.toString();
+console.log(myVar); //"Jan,Feb,Mar,Apr"
