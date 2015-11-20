@@ -1,0 +1,31 @@
+
+Adds one or more elements to the end of an array and returns the new length property of the object upon
+which the method was called.
+
+syntax: arr.push(element1,....,elementN)
+
+the push() method appends values to an array. it is intentionally generic. can be used with 'call' or 'apply' on
+objects resembling arrays. the push method relies on a length property to determine where to start inserting the
+given values. if the length property cannot be converted into a number, the index used is 0. if length is
+nonexistent, then it will be created.
+
+Adding elements to an array
+
+var sports = ['soccer', 'baseball'];
+var total = sports.push('football', 'swimming');
+console.log(sports);
+console.log(total);
+//["soccer", "baseball", "football", "swimming"]
+//4
+
+
+Merging two arrays. This example uses apply() to push all elements from a second array.
+var vegetables = ['parsnip', 'potato'];
+var moreVegs = ['celery', 'beetroot'];
+
+// merge the second array into the first one. Equivalent to vegetables.push('celery', 'beetroot');
+
+Array.prototype.push.apply(vegetables, moreVegs);
+console.log(vegetables);
+
+//["parsnip", "potato", "celery", "beetroot"]
