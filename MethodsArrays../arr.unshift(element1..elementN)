@@ -1,0 +1,9 @@
+Adds one or more elements to the begining of an array and returns the new length of the array.
+
+arr.unshift(element1..elementN)
+
+Is intentionally generic. can be 'called' or 'applied' to objects resembling arrays.
+
+var arr = [1, 2];
+console.log(arr.unshift(0)); //3
+console.log(arr); // [0, 1, 2]
