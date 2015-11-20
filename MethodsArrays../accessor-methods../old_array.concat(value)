@@ -32,6 +32,10 @@ console.log(alphaNumeric);
 
 -- (https://egghead.io/lessons/javascript-javascript-array-methods-in-depth-concat?series=javascript-arrays-in-depth#/tab-transcript)
 
+Concat creates a shallow copy of an existing array that includes any arguments you pass to it. In this lesson, 
+we look at using concat for adding additional values to an array then cover some more useful features such as accepting
+other arrays as arguments & how to chain concat with other array methods such as forEach
+
 var people = [
   {
     name: 'Shane'
