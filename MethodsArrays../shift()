@@ -1,0 +1,16 @@
+Removes the first element from an array and returns that element. changes the length of the array.
+
+arr.shift()
+
+Again, intentionally generic, can be 'called' or 'applied' to objects resembling arrays.
+
+var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+console.log("myFish before: " + myFish);
+
+var shifted = myFish.shift();
+console.log("myFish after: " + myFish);
+console.log("Removed the element: " + shifted);
+
+//"myFish before: angel,clown,mandarin,surgeon"
+//"myFish after: clown,mandarin,surgeon"
+//"Removed this element: angel"
