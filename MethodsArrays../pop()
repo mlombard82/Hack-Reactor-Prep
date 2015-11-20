@@ -1,0 +1,19 @@
+
+Removes the last element from an array and returns that element.
+
+syntax: arr.pop()
+
+description: the pop method removes the last element from an array and returns that value to the caller.
+it is intentionally generic; the method can be called or applied to objects resembling arrays. Objects which do not
+contain a 'length' property reflecting the last in a series of consecutive, zero-based numerical properties may not
+behave in a meaningful manner.
+if you call pop() on an empty array, it returns undefined.
+
+this code creates the myFish array containing 4 elements, then removes its last:
+
+
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+console.log(myFish); // ["angel", "clown", "mandarin", "sturgeon"]
+var popped = myFish.pop();
+console.log(myFish); // ["angel", "clown", "mandarin"]
+console.log(popped); // "sturgeon"
