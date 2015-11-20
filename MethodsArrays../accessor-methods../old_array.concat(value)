@@ -26,3 +26,34 @@ console.log(nums);
 var alpha = ['a', 'b', 'c'];
 var alphaNumeric = alpha.concat(1, [2, 3]);
 console.log(alphaNumeric);
+
+
+
+
+-- (https://egghead.io/lessons/javascript-javascript-array-methods-in-depth-concat?series=javascript-arrays-in-depth#/tab-transcript)
+
+var people = [
+  {
+    name: 'Shane'
+  },
+  {
+    name:'Sally'
+  }
+];
+
+
+var people2 = [
+  {
+    name: 'Simon'
+  },
+  {
+    name:'Ben'
+  }
+];
+
+
+people
+  .concat(people2)
+  .forEach(function(person){
+      console.log(person.name);
+});
