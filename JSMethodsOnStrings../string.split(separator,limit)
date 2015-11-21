@@ -1,0 +1,45 @@
+
+Split a string into an array of substrings:
+
+var str = "How are you doing today?";
+var res = str.split(" ");
+console.log(res);
+
+// ["How", "are", "you", "doing", "today?"]
+
+Definition and Usage
+
+The split() method is used to split a string into an array of substrings, and returns the new array (Doesn't change the
+original string)
+
+Syntax
+string.split(separator,limit)
+
+
+Parameter	Description
+separator	Optional. Specifies the character/regexp to use for splitting the string. If omitted, the entire string will be
+returned (an array with only one item)
+limit	Optional. An integer that specifies the number of splits, items after the split limit will not be included in the array.
+
+
+Return Value:	An Array, containing the splitted values
+
+                                                Example
+
+Use the limit parameter:
+
+var str = "How are you doing today?";
+var res = str.split(" ", 3);
+console.log(res);
+
+// ["How", "are", "you"]
+
+                                               Example
+
+Use a letter as a separator:
+
+var str = "How are you doing today?";
+var res = str.split("o");
+console.log(res);
+
+// ["H", "w are y", "u d", "ing t", "day?"]
