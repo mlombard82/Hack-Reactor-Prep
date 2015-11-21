@@ -1,0 +1,19 @@
+
+Returns the primitive value of a string object:
+
+var str = "Hello World!";
+var res = str.valueOf();
+The result res of will be:
+
+Hello World!
+
+Note: This method is usually called automatically by JavaScript behind the scenes, and not explicitly in code.
+
+Syntax
+string.valueOf()
+
+Parameters
+None
+
+Return Value:	A String, representing the primitive value of a string
+
