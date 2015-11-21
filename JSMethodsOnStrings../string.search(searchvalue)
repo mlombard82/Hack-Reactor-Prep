@@ -1,0 +1,40 @@
+
+The search() method searches a string for a specified value, and returns the position of the match.
+
+The search value can be a string/regExp.
+
+This method returns -1 if no match is found.
+
+Syntax
+string.search(searchvalue)
+
+Parameter	Description
+searchvalue	Required. A regular expression. 
+A string will automatically be converted to a regular expression.
+
+
+Return Value:	A Number, representing the position of the first occurrence of the specified searchvalue,
+or -1 if no match is founds
+
+
+                                              Example
+
+Perform a case-sensitive search:
+
+var str = "Mr. Blue has a blue house";
+var n = str.search("blue");
+console.log(n);
+
+// 15
+
+
+                                             Example
+
+Perform a case-insensitive search:
+
+var str = "Mr. Blue has a blue house";
+var n = str.search(/blue/i);
+console.log(n);
+
+// 4
+
