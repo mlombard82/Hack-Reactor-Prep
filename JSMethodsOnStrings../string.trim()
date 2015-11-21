@@ -1,0 +1,19 @@
+
+Remove whitespace from both sides of a string:
+
+var str = "       Hello World!        ";
+alert(str.trim());
+The alert box will display:
+
+Hello World!
+
+Note: The trim() method does not change the original string.
+
+Syntax
+string.trim()
+
+Parameters
+None.
+
+
+Return Value:	A String, representing the string with removed whitespace from both ends
