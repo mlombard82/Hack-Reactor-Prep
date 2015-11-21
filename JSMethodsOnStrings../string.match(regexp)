@@ -1,0 +1,37 @@
+
+The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+
+Note: If the regular expression does not include the g modifier (to perform a global search), the match() method
+will return only the first match in the string.
+
+This method returns null if no match is found.
+
+Syntax
+string.match(regexp)
+
+Parameter	Description
+regexp	Required. The value to search for, as a regular expression.
+
+Return Value:	An Array, containing the matches, one item for each match, or null if no match is found.
+
+
+
+Example
+
+Search a string for "ain":
+
+var str = "The rain in SPAIN stays mainly in the plain"; 
+var res = str.match(/ain/g);
+console.log(res);
+
+// ["ain", "ain", "ain"]
+
+Example
+
+Perform a global, case-insensitive search for "ain":
+
+var str = "The rain in SPAIN stays mainly in the plain"; 
+var res = str.match(/ain/gi);
+console.log(res);
+
+// ["ain", "AIN", "ain", "ain"]
