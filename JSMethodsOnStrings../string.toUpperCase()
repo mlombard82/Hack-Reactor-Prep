@@ -1,0 +1,20 @@
+
+Convert the string to uppercase letters:
+
+var str = "Hello World!";
+var res = str.toUpperCase();
+console.log(res);
+
+// HELLO WORLD!
+
+The toUpperCase() method converts a string to uppercase letters.
+
+Note: toUpperCase() does not change the original string.
+
+Tip: Use the toLowerCase() method to convert a string to lowercase letters.
+
+Syntax
+string.toUpperCase()
+
+Parameters
+None.
