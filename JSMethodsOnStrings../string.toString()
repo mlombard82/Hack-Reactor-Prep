@@ -1,0 +1,18 @@
+
+Returns the value of a String object:
+
+var str = "Hello World!";
+var res = str.toString();
+console.log(res);
+
+// Hello World!
+
+Syntax
+string.toString()
+
+Parameters
+None.
+
+Return Value:	A String, representing the value of a string
+
+
