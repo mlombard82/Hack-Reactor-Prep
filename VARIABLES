@@ -1,0 +1,68 @@
+Back to JavaScript Basics: VARIABLES!  
+copyright by https://github.com/batmanimal
+
+August 25, 2015
+
+We are officially in the "senior" portion of the program at Hack Reactor, and are moving towards more project-based work,
+and hiring/career skills prep. To help prepare for mock interviews, I'm reviewing some of my notes from earlier in the year.
+It's been nice to go back and get a refresher on the basics, this time coming with a much stronger sense of the subject
+material.
+
+So, let's talk about variables. First, a definition:
+
+Variable: A label that points to a value that is stored in memory. Once a variable is assigned, you can refer to it later
+in your code.
+
+OK, that's nice, you might think. But what's the big? There are TWO big reasons why we care about this property of variables
+that I'll go over real quick.
+
+Building efficient programs
+
+var storedNum = (1+1)*2;
+console.log(result); // 4
+console.log(result); // 4
+
+In this example, the variable storedNum is computed only once, and the computed result is logged twice.
+If you ran console.log((1+1)*2); each time you needed to access the stored number, the computer would have to compute
+the result each time. Maybe that's fine for this super simple example, but you can imagine how this would be meaningfully
+inefficient if you had a complex computation that required a non-trivial amount of memory. What else should you know about
+variables? You can use them to point to the values stored in other variables!
+
+var storedNum = (1+1)*2;
+console.log(storedNum); // 4
+var other = storedNum; 
+storedNum = 5;
+console.log(other); // 4
+If you're wondering why 'other' still evaluates to 4, even after storedNum is set to 5, it might help to think of variables
+as physical labels, or nametags.
+
+Let's say you have a "cookie" nametag on a box of Oreos, and then you stick a "milk" nametag on the same box. Now imagine
+you peel off the "cookie" nametag and put it on a box of Teddy Grahams. What happens to the "milk" nametag? It's still
+on the box of Oreos. Just because you moved the "cookie" nametag to the Teddy Grahams box, it doesn't mean that the "milk"
+nametag moves to the Teddy Grahams. The "milk" nametag stays on the Oreos until it's moved and affixed to something else.
+
+Man. Now I really want Oreos.
+
+Here's another way to think about variables pointing to other variables:
+
+var storedNum = (1+1)*2;
+console.log(storedNum); // 4
+var other = storedNum + 0; 
+storedNum = 5;
+console.log(other); // 4
+
+One helpful trick is to assign 'other' a value of storedNum + 0. This the exact same thing as before, but makes it clearer
+that other is independent of the storedNum variable.
+
+* But, seriously, why do we care? *
+
+Accessing certain values
+
+The second major reason that we care about variables is because sometimes it's not possible to type out a literal that
+represents a value in your program. For example, let's say you need a random number:
+
+var randomNum = Math.random();
+console.log(randomNum);
+
+Since you don't know what the random number will be, you have to store the value in a variable if you want to access
+that random number value later.
