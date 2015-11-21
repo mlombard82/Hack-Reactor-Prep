@@ -40,3 +40,20 @@ console.log(veggie + ' already exists in the veggies collection.');
 var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
 updateVegetablesCollection(veggies, 'spinach');
 updateVegetablesCollection(veggies, 'spinach');
+
+
+https://egghead.io/lessons/javascript-javascript-array-methods-in-depth-indexof?series=javascript-arrays-in-depth
+
+indexOf is used to search for a value or reference inside of an array. In this lesson we first look at what values are
+returned when a search is successful vs when it's unsuccessful. Then we move onto a technique that shows how to use
+the return value to create a boolean flag that can be checked easily. We end by filtering 1 array based on the existence
+of a value in a whitelist array.
+
+var family = ['Shane', 'Sally', 'Isaac'];
+var kittieExists = family.indexOf('kittie') > -1;
+
+if(!kittieExists){
+  family.push('kittie');
+}
+
+console.log(family);      // ["Shane", "Sally", "Isaac", "kittie"]
