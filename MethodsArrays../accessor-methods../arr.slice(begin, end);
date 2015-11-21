@@ -1,4 +1,7 @@
-Doesn't alter. Returns a shallow copy of a portion of an array into a new array object.
+Doesn't alter. Returns a shallow copy of a portion of an array into a new array object. What is a shallow copy? if the
+original array contains numbers and strings, when you call slice to create your new array, it will literally copy the
+values. but if the original array contains Object references, the reference is the one that is copied, not the Object.
+
 
 arr.slice(begin, end);
 
