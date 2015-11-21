@@ -12,7 +12,8 @@ string.charAt(index)
 Parameter:
 index	Required. An integer representing the index of the character you want to return
 
-Return Value:	A String, representing the character at the specified index, or an empty string if the index number is not found
+Return Value:	A String, representing the character at the specified index, or an empty string if the index number
+is not found
 
 Example
 
