@@ -1,0 +1,20 @@
+
+Convert the string to lowercase letters:
+
+var str = "Hello World!";
+var res = str.toLowerCase();
+console.log(res);
+
+// hello world!
+
+The toLowerCase() method converts a string to lowercase letters.
+
+Note: The toLowerCase() method does not change the original string.
+
+Tip: Use the toUpperCase() method to convert a string to uppercase letters.
+
+Syntax
+string.toLowerCase()
+
+Parameters
+None.
