@@ -1,0 +1,28 @@
+
+Extract characters from a string:
+
+
+
+var str = "Hello world!";
+
+var res = str.substring(1, 4);
+
+console.log(res);
+
+// ell
+
+
+The substring() method extracts the characters from a string, between two specified indices, and returns the new sub string.
+This method extracts the characters in a string between "start" and "end", not including "end" itself.
+
+If "start" is greater than "end", this method will swap the two arguments, meaning str.substring(1,4) == str.substring(4,1).
+
+If either "start" or "stop" is less than 0, it is treated as if it were 0.
+
+Note: The substring() method does not change the original string.
+
+
+
+Syntax
+string.substring(start,end)
+
