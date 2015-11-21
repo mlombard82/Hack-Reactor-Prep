@@ -1,0 +1,60 @@
+
+Extracts part of a string:
+
+var str = "Hello world!";
+var res = str.substr(1, 4);
+console.log(res);
+
+// ello
+
+Definition and Usage
+
+The substr() method extracts parts of a string, beginning at the character at the specified position,
+and returns the specified number of characters.
+
+Tip: To extract characters from the end of the string, use a negative start number.
+
+Note: The substr() method does not change the original string.
+
+Syntax
+string.substr(start,length)
+
+Parameter	Description
+start	Required. The position where to start the extraction.
+length	Optional. The number of characters to extract. If omitted, it extracts the rest of the string
+
+Return Value:	A new String, containing the extracted part of the text. If length is 0 or negative,
+an empty string is returned
+
+
+                                       Example
+
+Begin the extraction at position 2, and extract the rest of the string:
+
+var str = "Hello world!";
+var res = str.substr(2);
+The result of res will be:
+
+// llo world!
+
+
+                                       Example
+
+Extract only the first character:
+
+var str = "Hello world!";
+var res = str.substr(0, 1);
+The result of res will be:
+
+// H
+
+
+                                       Example
+
+Extract only the last character:
+
+var str = "Hello world!";
+var res = str.substr(-1, 1);
+console.log(res);
+
+// !
