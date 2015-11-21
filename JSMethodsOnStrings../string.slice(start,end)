@@ -1,0 +1,49 @@
+
+Extract parts of a string:
+
+var str = "Hello world!";
+var res = str.slice(1,5);
+The result of res will be:
+
+//ello
+
+
+The slice() method extracts parts of a string and returns the extracted parts in a new string.
+
+Use the start and end parameters to specify the part of the string you want to extract.
+
+Tip: Use a negative number to select from the end of the string.
+
+Syntax
+string.slice(start,end)
+
+
+Parameter	Description
+start	Required. The position where to begin the extraction.
+end	Optional. The position (up to, but not including) where to end the extraction. If omitted, slice() selects
+all characters from the start-position to the end of the string.
+
+Return Value:	A String, representing the extracted part of the string
+
+
+                                                Example
+
+Extract the whole string:
+
+var str = "Hello world!";
+var res = str.slice(0);
+console.log(res);
+
+// Hello world!
+
+
+                                                Example
+
+Extract only the last character:
+
+var str = "Hello world!";
+var res = str.slice(-1);
+console.log(res);
+
+// !
+
