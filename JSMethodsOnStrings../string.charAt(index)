@@ -1,0 +1,25 @@
+
+The charAt() method returns the character at the specified index in a string.
+
+The index of the first character is 0, the second character is 1, and so on.
+
+Tip: The index of the last character in a string is string.length-1, the second last character is string.length-2,
+and so on (See "More Examples").
+
+Syntax
+string.charAt(index)
+
+Parameter:
+index	Required. An integer representing the index of the character you want to return
+
+Return Value:	A String, representing the character at the specified index, or an empty string if the index number is not found
+
+Example
+
+Return the last character of a string:
+
+var str = "HELLO WORLD";
+var res = str.charAt(str.length-1);
+console.log(res);
+
+//D
