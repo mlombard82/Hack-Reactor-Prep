@@ -1,5 +1,5 @@
 One very common operation in programming is to iterate through an Array's contents, apply a test function
-to each item, and create a new array containing only those items the passed the test. For example, let's say you
+to each item, and create a new array containing only those items that pass the test. For example, let's say you
 wanted to loop through an array of stocks and select only those with the price larger than a certain value. 
 In this lesson we will demonstrate how to use the Array's filter method to easily perform this operation with 
 less code than a loop would require.
