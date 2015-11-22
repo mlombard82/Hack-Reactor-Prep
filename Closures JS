@@ -22,10 +22,10 @@ This is the saga code from earlier.*/
 
    var sagas = [];              /* 1. lets make a global variable called sagas that will store an array for us,
                                    and we'll use this array to eventually store saga functions. let's try running this
-                                   code with our simulated interpreter again.
-// var hero = aHero();             2. then, the line that assigns a new value to the hero variable will run and
+                                   code with our simulated interpreter again*/
+// var hero = aHero();          /* 2. then, the line that assigns a new value to the hero variable will run and
                                    create some random string, in this case 'Boy', to string in the hero variable. */
-// var newSaga = function(){       3. yet another assignment, so a function object gets placed into the newSaga variable.       
+// var newSaga = function(){    /* 3. yet another assignment, so a function object gets placed into the newSaga variable.       
 //   var foil = aFoil();           5. Invoquing any function creates a new context, and that context is where
                                   // all the lookups will start. We add the variable foil to this context. foil is
                                   // randomly selected to be 'Rat'
