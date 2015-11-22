@@ -88,12 +88,12 @@ This starts to become clear when saga(); runs for the second time. the process w
 but running saga a 2nd time will create a totally new execution context, instead of referencing the original
 most inner context.This accomodates for storage of different bindings. As ever, the interpreter lookup focus
 will also shift into the newly created context. The var declaration creates a new variable in this context
-deep = "Tips". 
+deed = "Tips". 
 Given the current in-memory conditions, it will log: "GalTipsCow" (The variable lookups start from the current
 context, the inner most, and scan out from there to any parent context)
 With the inner function complete, the interpreter jumps back out to where that function was called and the current
-context moves out as well. Furthermore this was all part of the fist call to newSaga, which is now completed.
-Running newSaga function a second time (middle scope), will result in drafting a new, separate middle scope,
-itself containing 2 two most inner scopes.
+context moves out as well. Furthermore this was all part of the first call to newSaga, which is now completed.
+Running the newSaga function a second time (middle scope), will result in drafting a new, separate middle scope,
+itself containing 2 most inner scopes.
 Almost all the exact same steps would occur, but the values would be different and it is stored in a new variable.
 The 2 function objects were created by the same lines of code, but in 2 different invocations of the newSaga function.
