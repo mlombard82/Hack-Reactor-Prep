@@ -33,7 +33,7 @@ By learning the forEach, map, and filter method we're going to learn how we can 
 of whether the data is arriving asynchronously like from event or we're pulling it out of an in-memory data
 structure like an array.
 
-Now that we know these three methods we can learn how to combine them together to write some pretty complex 
+Now that we know these three methods, we can learn how to combine them together to write some pretty complex 
 programs. First I'm going to start by creating an array of stocks. What I'd like to do is print the symbols of 
 those stocks with a price larger than or equal to 150.
 
