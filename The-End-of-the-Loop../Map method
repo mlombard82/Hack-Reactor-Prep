@@ -6,7 +6,7 @@ the Array's map method to easily perform this operation with less code than a lo
 function getStockSymbols (stocks){
   return stocks.map(function(stock){
     return stock.symbol;
-  })
+  });
   /*
   var symbols = [];
   
