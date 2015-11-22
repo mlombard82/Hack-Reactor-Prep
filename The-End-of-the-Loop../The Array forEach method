@@ -6,7 +6,7 @@ function getStockSymbols (stocks){
   */
   stocks.forEach(function(stock){
     symbols.push(stock.symbol);
-  })
+  });
   
   /*
   for (counter = 0; counter < stocks.length; counter++){
