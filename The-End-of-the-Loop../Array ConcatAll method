@@ -46,7 +46,7 @@ exchanges.forEach(function(exchange){
 
 Thus far we've learned about three of the arrays methods, forEach, map, and filter. In the previous example we
 learned that we could chain map and filter together to transform arrays into new arrays. Then we can use the
-forEach method to consume all the data in the newly created transformed away and then do something with it,
+forEach method to consume all the data in the newly created transformed array and then do something with it,
 like print it out to the console.
 
 Working with arrays is common, but even more common in programming is working with nested data structures like
@@ -85,7 +85,7 @@ On a four dimensional array a three dimensional array, a two dimensional array a
 
 Notice also that concatAll will not work on a flat array because it assumes that each item in the array is another 
 array. ConcatAll can only be used on arrays of two or more dimensions. Now I can take the code below and replace it
-with concatAll, call for each, get all the stocks, and format this slightly differently.
+with concatAll, call forEach, get all the stocks, and format this slightly differently.
 
 I've created a new array containing only the stocks in all the exchanges. Now I'm going to forEach over it, 
 and I'm going to log the stock to the console. I'll comment out this code here, and we should see that when we run
