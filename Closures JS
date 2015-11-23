@@ -100,3 +100,63 @@ sagas[1]();
 parameter to take a new value every time you call the function, that's an opportunity to refactor your code,
 such that you store the value in a variable from an outer scope. Because of the way Closures work,
 the inner function will always have access to the outer scope variable, even after the outer function returns.*/
+
+
+
+http://javascriptissexy.com/understand-javascript-closures-with-ease/
+
+What is a closure?
+A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain.
+The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), 
+it has access to the outer function’s variables, and it has access to the global variables.
+The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters.
+Note that the inner function cannot call the outer function’s arguments object, however, even though it can call
+the outer function’s parameters directly.
+You create a closure by adding a function inside another function.
+A Basic Example of Closures in JavaScript: 
+
+
+
+
+
+function showName (firstName, lastName) {
+var nameIntro = "Your name is ";
+    // this inner function has access to the outer function's variables, including the parameter
+function makeFullName () {        
+return nameIntro + firstName + " " + lastName;    
+}
+return makeFullName ();
+}
+console.log(showName ("Michael", "Jackson")); // Your name is Michael Jackson 
+
+
+
+
+
+
+Closures’ Rules and Side Effects
+
+Closures have access to the outer function’s variable even after the outer function returns:
+One of the most important and ticklish features with closures is that the inner function still has access
+to the outer function’s variables even after the outer function has returned. Yep, you read that correctly.
+When functions in JavaScript execute, they use the same scope chain that was in effect when they were created. 
+This means that even after the outer function has returned, the inner function still has access to the outer function’s
+variables. Therefore, you can call the inner function later in your program. This example demonstrates:
+
+
+
+
+
+function celebrityName (firstName) {
+    var nameIntro = "This celebrity is ";
+    // this inner function has access to the outer function's variables, including the parameter
+   function lastName (theLastName) {
+        return nameIntro + firstName + " " + theLastName;
+    }
+    return lastName;
+}
+
+var mjName = celebrityName ("Michael"); // At this juncture, the celebrityName outer function has returned.
+// The closure (lastName) is called here after the outer function has returned above
+// Yet, the closure still has access to the outer function's variables and parameter
+console.log(mjName ("Jackson")); // This celebrity is Michael Jackson
