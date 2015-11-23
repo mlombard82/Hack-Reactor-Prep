@@ -97,3 +97,30 @@ Running the newSaga function a second time (middle scope), will result in drafti
 itself containing 2 most inner scopes.
 Almost all the exact same steps would occur, but the values would be different and it is stored in a new variable.
 The 2 function objects were created by the same lines of code, but in 2 different invocations of the newSaga function.
+
+
+
+http://javascriptissexy.com/javascript-variable-scope-and-hoisting-explained/
+
+Local Variables (Function-level scope)
+Unlike most programming languages, JavaScript does not have block-level scope (variables scoped to surrounding
+curly brackets); instead, JavaScript has function-level scope. Variables declared within a function are local variables
+and are only accessible within that function or by functions inside that function. 
+
+
+Variable Scope
+A variable’s scope is the context in which the variable exists. The scope specifies from where you can access a variable
+and whether you have access to the variable in that context.
+Variables have either a local scope or a global scope.
+
+
+
+
+
+var name = "Richard";
+
+function showName () {
+  var name = "Jack"; // local variable; only accessible in showName function
+	console.log (name); // Jack
+}
+console.log (name); // Richard: the global variable
