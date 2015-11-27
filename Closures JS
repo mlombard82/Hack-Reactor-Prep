@@ -144,9 +144,6 @@ This means that even after the outer function has returned, the inner function s
 variables. Therefore, you can call the inner function later in your program. This example demonstrates:
 
 
-
-
-
 function celebrityName (firstName) {
     var nameIntro = "This celebrity is ";
     // this inner function has access to the outer function's variables, including the parameter
@@ -213,6 +210,11 @@ in the example, multiplier returns a frozen chunk of code that gets stored in th
 calls the value in this variable, causing the frozen code(return number*factor;) to be activated. it still has access to 
 the factor variable from the multiplier call that created it, and in addition it gets access to the argument passed when
 unfreezing it, 5, through its number parameter.
+
+
+
+
+
 
 
 
