@@ -99,8 +99,7 @@ We're not going to translate the item like we did in map. We're just going to ad
 Finally, all the filter function needs to do is return the new Array of the filtered results. Now, we can use 
 this filter function to replace all this code with something much, much shorter. I can simply go return stocks filter.
 We pass in the predicate function. The predicate function gets passed the current stock, and it returns true or false
-depending on whether we want to keep a stock or not. Now, in order to decide if we want to keep a stock,
-we're going to compare the price to the min price and if true, it's going to end up in the results.
+on the comparison of the price to the min price and if true, it's going to end up in the results.
 
 Here, if I run this, we should see the exact same result. Sure enough we do. Only XFX and TNZ are included.
 I can go ahead and delete this code right here because, as I said, this filter method already exists on the Array.
