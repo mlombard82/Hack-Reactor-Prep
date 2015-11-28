@@ -4,7 +4,7 @@ looking for a stock that matched a certain criteria, we would first need to loop
 and then all of the stocks within.
 
 In these situations, most developers would nest two loops. However in this lesson we will write a new Array function
-"concatAll" which will automatically flatten nested arrays buy one dimension. This will remove the need to ever use
+"concatAll" which will automatically flatten nested arrays by one dimension. This will remove the need to ever use
 a nested loop to flatten a nested array.
 
 var exchanges = [
