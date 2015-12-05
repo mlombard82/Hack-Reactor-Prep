@@ -1,0 +1,15 @@
+
+IIFE - Immediately invoked function expressions.
+
+var foo = "foo";
+
+(function(){
+  var foo = "foo2";
+  console.log(foo);      //"foo2"
+})();
+
+console.log(foo);        // "foo"
+
+The Immediately Invoked Function Expressions (IIFE) Pattern is a technique used to hide scope. It involves wrapping code
+inside a function that is immediately called. This allows developers to create object in their own scope without polluting
+the outer scope.
