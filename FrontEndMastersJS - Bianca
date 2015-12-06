@@ -10,3 +10,19 @@ console.log(box[key]);   //'cardboard'
 ....................
 Storing Data
 when we store a function as a property in an object, we call it a method.
+
+var box = {};
+
+box["material"] = "cardboard";
+
+box["size"] = {
+  "height": 2,
+  "width" : 80
+};
+
+box.area = function(){
+  return box.size.height* box.size.width;
+};
+
+* object literal notation in contrast to adding properties dynamically.
+
