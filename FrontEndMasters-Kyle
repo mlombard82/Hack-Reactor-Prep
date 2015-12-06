@@ -1,0 +1,42 @@
+Closure examples
+Closure is crucial for creating modules. Modules let you define private implementation details that are invisible
+to the outside world. At the same time, you can create a public API to allow access to necessary functionality.
+Kyle shares an example of how closure is used to create a module and answers a few audience questions about how it compares
+to other languages.
+
+function Hello(name){
+  
+  function speak(){
+    console.log(name);
+  }
+  
+  return speak;
+}
+
+var fn = Hello("Kyle");
+
+fn ();
+
+// Kyle
+
+
+// Now, if instead of a function, we return an object...
+
+function Hello(name){
+  
+  function speak(){
+    console.log(name);
+  }
+  
+  return {
+    say: speak
+  };      
+}
+
+var o = Hello("Kyle");
+
+o.say();
+
+// Kyle
+
+//And to really drive the point home
