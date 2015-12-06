@@ -233,6 +233,7 @@ function makeAdder(x){
   return add;
 }
 
+
 the reference to the inner add(...) function that gets returned with each call to the outer makeAdder(...) is able to
 remember whatever x value was passed in to makeAdder(..). let's use makeAdder(..):
 
