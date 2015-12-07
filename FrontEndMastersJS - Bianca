@@ -26,3 +26,14 @@ box.area = function(){
 
 * object literal notation in contrast to adding properties dynamically.
 
+.......................
+Native properties
+
+var box = [];
+
+box['0'] = 'meow';
+box[3] = {'babyBox': true};
+
+box[box.length - 1];     // here the length of the array is 4.
+Object {babyBox: true}
+
