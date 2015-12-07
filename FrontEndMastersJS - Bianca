@@ -42,3 +42,11 @@ terms:
 object literal notation
 array literal notation
 
+........................
+
+explicitly returning a value versus having a side effect
+
+.......................
+A constructor, at its core, is a function that returns an object. to let other programmers know we mean a constructor,
+we give name to the function with the first letter en mayuscula!
+
