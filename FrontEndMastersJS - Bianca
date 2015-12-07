@@ -1,3 +1,9 @@
+Revisit: 
+functions: looping 2.37- 2.51
+
+
+
+
 Objects
 
 var box = [];
@@ -49,4 +55,17 @@ explicitly returning a value versus having a side effect
 .......................
 A constructor, at its core, is a function that returns an object. to let other programmers know we mean a constructor,
 we give name to the function with the first letter en mayuscula!
+
+function AnimalMaker (name) {
+  return {
+    speak: function () {
+      console.log("my name is ", name);
+    }
+  };
+}
+
+var myAnimal = AnimalMaker("Cheetah");
+
+myAnimal.speak();        // "my name is Cheetah"
+
 
