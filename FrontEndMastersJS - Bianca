@@ -37,3 +37,8 @@ box[3] = {'babyBox': true};
 box[box.length - 1];     // here the length of the array is 4.
 Object {babyBox: true}
 
+........................
+terms:
+object literal notation
+array literal notation
+
