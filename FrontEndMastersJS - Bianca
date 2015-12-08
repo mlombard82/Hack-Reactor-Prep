@@ -68,4 +68,12 @@ var myAnimal = AnimalMaker("Cheetah");
 
 myAnimal.speak();        // "my name is Cheetah"
 
+........................
+the Arguments keyword
+
+........................
+Constructors
+
+
+
 
