@@ -74,6 +74,9 @@ the Arguments keyword
 ........................
 Constructors
 
+Bianca introduces the concept of using a function as a constructor. A constructor is a function that returns an object.
+This object is a data model which contains the properties and methods for that object.
+
 
 
 
