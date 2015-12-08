@@ -88,12 +88,16 @@ function AnimalMaker (name) {
 
 var myAnimal = AnimalMaker("Cheetah");
 
-myAnimal.speak
-() {
+myAnimal.speak            
+
+// function () {
       console.log("my name is ", name);
     }
-myAnimal.speak()
-VM18100:5 my name is  Cheetah
+    
+    
+myAnimal.speak()                 // dot notation: my name is  Cheetah
+
+myAnimal['speak']()              // bracket notation: my name is  Cheetah
 
 
 
