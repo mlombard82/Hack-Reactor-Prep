@@ -105,6 +105,28 @@ myAnimal['speak']()              // bracket notation: my name is  Cheetah
 
 //to make a farm of animal objects borrowing from AnimalMaker
 
+function AnimalMaker(name) {
+  return {
+    speak: function () {
+      console.log("my name is ", name);
+    }
+  };
+}
+
+var animalNames = ["sheep", "bird", "big lager"];
+
+var farm = [];
+for (var i = 0; i < animalNames.length; i++){
+  var animal = AnimalMaker(animalNames[i]);
+  farm.push(animal);
+}
+
+console.log(farm);
+
+for (var i = 0; i < farm.length; i++){
+  console.log(farm[i]["speak"]());
+}
+
 
 
 
