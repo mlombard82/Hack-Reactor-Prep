@@ -130,8 +130,10 @@ for (var i = 0; i < farm.length; i++){
 
 
 .............................
-CLOSURE
+CLOSURE (building up to it)
 
+
+1.
 var closureAlert = function (){
   var x = "Help! I'm a variable stuck in a closure!";
 
@@ -143,6 +145,23 @@ var closureAlert = function (){
 };
 
 closureAlert();             //"Help! I'm a variable stuck in a closure!"
+
+
+2.
+var closureAlert = function (){
+  var x = "Help! I'm a variable stuck in a closure!";
+
+  var alerter = function(){
+    alert(x);
+  };
+
+setTimeout(alerter, 1000);
+
+  console.log("will still run right after");
+};
+
+closureAlert();
+
 
 
 
