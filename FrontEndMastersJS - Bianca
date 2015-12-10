@@ -176,8 +176,8 @@ var closureAlert = function (){
   return alerter;
 };
 
-var funcStorer = closureAlert()
-var funcStorer2 = closureAlert()
+var funcStorer = closureAlert();
+var funcStorer2 = closureAlert();
 funcStorer();
 funcStorer();
 funcStorer();
