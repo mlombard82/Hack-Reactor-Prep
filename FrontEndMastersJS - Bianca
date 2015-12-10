@@ -183,7 +183,9 @@ funcStorer();
 funcStorer();
 
 what happens is, once we call closureAlert(); whatever the function returns, is what is actually being stored in 
-the variable (var funcStorer = closureAlert();). ClosureAlert is being called once only and that is when
+the variable (var funcStorer = closureAlert();). ClosureAlert is being called once only and that is when it is being
+assigned to the var funcStorer, because if calling funcStorer(); would mean calling ClosureAlert, then x would be reset
+to zero (z= 0) every time.
 
 
 
