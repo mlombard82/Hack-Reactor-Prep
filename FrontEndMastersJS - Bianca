@@ -166,3 +166,23 @@ closureAlert();
 
 
 
+with setTimeOut, JavaScript is calling the function alerter later. With this next one, I am calling it later.
+
+var closureAlert = function (){
+  var x = 0;
+  var alerter = function (){
+    console.log(++x);
+  };
+  return alerter;
+};
+
+var funcStorer = closureAlert()
+var funcStorer2 = closureAlert()
+funcStorer();
+funcStorer();
+funcStorer();
+
+
+
+
+
