@@ -223,9 +223,12 @@ function counter () {
 
 var myCounter = counter();
 
-myCounter["count"]()
-myCounter["count"]()
-myCounter["count"]()
+myCounter.count();
+myCounter.count();
+myCounter.count();
+myCounter.count();
+myCounter.count();
+
 
 
 
