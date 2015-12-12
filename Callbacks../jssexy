@@ -4,3 +4,14 @@ http://javascriptissexy.com/understand-javascript-callback-functions-and-use-the
 What is a Callback or Higher-order Function?
 
 A callback function, also known as a higher-order function, is a function that is passed to another function (let’s call this other function “otherFunction”) as a parameter, and the callback function is called (or executed) inside the otherFunction. A callback function is essentially a pattern (an established solution to a common problem), and therefore, the use of a callback function is also known as a callback pattern.
+
+Ruminate on this other classic example of callback functions in basic JavaScript:
+
+var friends = ["Mike", "Stacy", "Andy", "Rick"];
+​
+friends.forEach(function (eachName, index){
+console.log(index + 1 + ". " + eachName); // 1. Mike, 2. Stacy, 3. Andy, 4. Rick​
+});
+
+
+Again, note the way we pass an anonymous function (a function without a name) to the forEach method as a parameter.
