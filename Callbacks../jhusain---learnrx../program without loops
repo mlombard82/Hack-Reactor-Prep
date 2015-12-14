@@ -1,0 +1,11 @@
+
+forEach
+
+[1,2,3].forEach(x => console.log(x)) // takes a function and applies it to every item in an array.
+
+//1
+//2
+//3
+
+
+Map  // takes a function and applies it to every item in a collection, creating a new value and then creating a new array
