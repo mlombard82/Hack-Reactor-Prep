@@ -59,5 +59,10 @@ Array.prototype.map = function(projectionFunction) {
   this.forEach(function(itemInArray){
   results.push(projectionFunction(itemInArray));
   });
+
+  return results;
 };
+
+ JSON.stringify([1,2,3].map( x => x + 1))
+"[2,3,4]"
 
