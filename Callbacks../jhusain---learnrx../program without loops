@@ -14,3 +14,13 @@ Map  // takes a function and applies it to every item in a collection, creating 
 [1,2,3].map(x => x + 1)        
 
 // [2, 3, 4]
+
+
+Filter   // Applies a test function. Only if that value passes the test will it make it into the NEW collection.
+
+[1,2,3].filter(x => x > 1)
+
+//[2, 3]
+
+
+concatAll() // flattens an array by one- dimension. Not a JS native function.
