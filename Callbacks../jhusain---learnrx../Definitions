@@ -2,7 +2,7 @@
 Array.prototype.map = function(projectionFunction) {
 	var results = [];
 	this.forEach(function(itemInArray) {
-		results.push(projectionFunction(itemInArray));
+		results.push(projectionFunction(itemInArray));                                    //map
 
 	});
 
@@ -14,5 +14,16 @@ Array.prototype.map = function(projectionFunction) {
 		
 		
 		
-		
+Array.prototype.filter = function(predicateFunction) {
+	var results = [];
+	this.forEach(function(itemInArray) {
+	  if (predicateFunction(itemInArray)) {                                                       //filter
+		results.push(itemInArray);
+	  }
+	});
+
+	return results;
+};
+
+// JSON.stringify([1,2,3].filter(function(x) { return x > 2})) === "[3]"		
 
