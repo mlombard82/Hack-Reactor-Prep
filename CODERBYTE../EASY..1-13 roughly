@@ -1,7 +1,7 @@
  /*FIRST REVERSE
  Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. 
 
-There exist several built-in functions in almost all languages that reverse a string for you very easily, 
+ There exist several built-in functions in almost all languages that reverse a string for you very easily, 
 so we'll cover how to first reverse a string manually and then we'll show you how to do it using built-in functions.
 
 A simple way to reverse a string would be to create a new string and fill it with the characters from the original
