@@ -45,3 +45,10 @@ Array.prototype.concatAll = function() {
 JSON.stringify([ [1,2,3], [4,5,6], [7,8,9] ].concatAll()) === "[1,2,3,4,5,6,7,8,9]"
 // [1,2,3].concatAll(); // throws an error because this is a one-dimensional array
 
+
+
+
+
+
+Nearly every time we flatten a tree we chain map() and concatAll(). Sometimes, if we're dealing with a tree several levels deep, we'll repeat this combination many times in our code. To save on typing, let's create a concatMap function that's just a map operation, followed by a concatAll.
+
