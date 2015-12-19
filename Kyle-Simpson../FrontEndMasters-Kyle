@@ -1,4 +1,5 @@
 Closure examples
+
 Closure is crucial for creating modules. Modules let you define private implementation details that are invisible
 to the outside world. At the same time, you can create a public API to allow access to necessary functionality.
 Kyle shares an example of how closure is used to create a module and answers a few audience questions about how it compares
