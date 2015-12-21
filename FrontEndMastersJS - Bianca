@@ -34,6 +34,33 @@ box.area = function(){
 
 * object literal notation in contrast to adding properties dynamically.
 
+
+
+----------------ITERATION (looping through objects to access key/values)
+
+var box = {};
+
+box["material"] = "cardboard";
+box[0] = "meow";
+box["^&*"] = "testing 123"
+
+for(var key in box){
+  console.log(key);
+}
+
+///////////////
+
+var box = {};
+
+box["material"] = "cardboard";
+box[0] = "meow";
+box["^&*"] = "testing 123"
+
+for(var key in box){
+  console.log(box[key]);
+}
+
+
 .......................
 Native properties
 
