@@ -153,6 +153,7 @@ for (var i = 0; i < animalNames.length; i++){
 
 console.log(farm);
 
+// Now get the animals in the farm to say their names.
 for (var i = 0; i < farm.length; i++){
   console.log(farm[i]["speak"]());
 }
