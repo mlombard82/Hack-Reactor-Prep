@@ -7,7 +7,7 @@ look again and understand Closure recipes 5:22
 
 
 
-Objects
+ Objects
 
 var box = [];
 box.material = 'cardboard';
