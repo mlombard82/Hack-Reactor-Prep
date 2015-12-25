@@ -36,8 +36,8 @@ Array.prototype.filter = function(predicateFunction) {
 
 Array.prototype.concatAll = function() {
 	var results = [];
-	this.forEach(subArray => subArray.
-       forEach(item => results.push(item))
+	this.forEach(subArray => 
+	subArray.forEach(item => results.push(item));
   );                                                                                                   //concatAll
 
 	return results;
