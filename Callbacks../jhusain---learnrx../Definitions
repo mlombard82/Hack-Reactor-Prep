@@ -51,6 +51,9 @@ JSON.stringify([ [1,2,3], [4,5,6], [7,8,9] ].concatAll()) === "[1,2,3,4,5,6,7,8,
 
 
 
+                                                 *   concatMap ()   *
+                                                 
+
 Nearly every time we flatten a tree we chain map() and concatAll(). Sometimes, if we're dealing with a tree several levels
 deep, we'll repeat this combination many times in our code. To save on typing, let's create a concatMap function that's just
 a map operation, followed by a concatAll.
@@ -80,7 +83,7 @@ Array.prototype.concatMap = function(projectionFunctionThatReturnsArray) {
 
 
                                                * Reduce *
-
+note: JS's reduce returns a value. Jafar Husain definition of reduce returns a value inside of an array, which is more useful.
 
 // [1,2,3].reduce(function(accumulatedValue, currentValue) { return accumulatedValue + currentValue; }); === [6];
 // [1,2,3].reduce(function(accumulatedValue, currentValue) { return accumulatedValue + currentValue; }, 10); === [16];
