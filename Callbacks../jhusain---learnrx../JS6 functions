@@ -1,5 +1,0 @@
-
-shorthand for writing functions
-
-function (x) {return x + 1;}   is now       x => x + 1
-function (x, y) {return x + y} is now (x + y) => x + y
