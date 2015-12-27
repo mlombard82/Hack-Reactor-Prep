@@ -1,5 +1,5 @@
 
-Split a string into an array of substrings:
+ Split a string into an array of substrings:
 
 var str = "How are you doing today?";
 var res = str.split(" ");
