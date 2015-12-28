@@ -2,25 +2,34 @@
 forEach
 
 [1,2,3].forEach(x => console.log(x)) // takes a function and applies it to every item in an array.
-
 //1
 //2
 //3
+
+
 
 
 Map  // takes a function and applies it to every item in a collection, creating a new value and then creating a NEW ARRAY
      //with the results
      
 [1,2,3].map(x => x + 1)        
-
 // [2, 3, 4]
 
 
 Filter   // Applies a test function. Only if that value passes the test will it make it into the NEW collection.
 
 [1,2,3].filter(x => x > 1)
-
 //[2, 3]
 
 
 concatAll() // flattens an array by one- dimension. Not a JS native function.
+
+
+
+reduce 
+
+// note: JS's reduce returns a value. Jafar Husain definition of reduce returns a value inside of an array, 
+which is more useful.
+
+// [1,2,3].reduce(function(acc, curr) { return acc + curr; }); === [6];
+// [1,2,3].reduce(function(accu, curr) { return acc + curr; }, 10); === [16];
