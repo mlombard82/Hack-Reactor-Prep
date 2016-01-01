@@ -1,4 +1,5 @@
 
+
 Exercise 4: Implement map()
 
 Array.prototype.map = function(projectionFunction) {
