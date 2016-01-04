@@ -1,3 +1,4 @@
+
 Description: For this challenge you will be determining whether or not a number is a power of two.
 have the function PowersofTwo(num) take the num parameter being passed which will be an integer and return 
 the string true if it's a power of two. If it's not return the string false. For example if the input is 16 
