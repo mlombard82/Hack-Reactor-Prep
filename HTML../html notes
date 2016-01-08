@@ -1,0 +1,5 @@
+
+Some elements have very precise meaning, as in "this is an image", "this is a heading", or "this is an ordered list." 
+Others are less specific, such as "this is a section on the page" or "this is part of the text." Yet others are used for
+technical reasons, such as "this is identifying information for the page, so do not display it." Regardless, in one way 
+or another all HTML elements have a semantic value.
