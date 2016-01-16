@@ -1,0 +1,9 @@
+
+At the beginning it was the command line..
+Git is an open source version control system
+Advantage: maintain history of changes and can use a remote server for backup (Github)
+
+cd:             takes you to your home directory.
+pwd(print working directory): To find out what directory you're currently in.
+cd ~path : example would be cd ~Desktop (changes directory to Desktop)...and then ls gets you the list
+cd .. to move up one directory
