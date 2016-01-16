@@ -7,3 +7,17 @@ cd:             takes you to your home directory.
 pwd(print working directory): To find out what directory you're currently in.
 cd ~path : example would be cd ~Desktop (changes directory to Desktop)...and then ls gets you the list
 cd .. to move up one directory
+
+
+git clone url: copies the remote repository to your local machine
+
+touch MauricioLM.txt      is a cool feature that creates a new text file and now if you do
+open MauricioLM.txt       it opens and you can type in the doc.
+
+git status
+
+git add
+
+git commit -m "mauri's commit "
+
+git push origin master
