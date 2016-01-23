@@ -26,7 +26,7 @@ $('#my-elem').click(function(e) {
  "When you are adding event listeners to several elements, IN A CLOSURE, inside a loop, there is an easy trap you can
  fall into. But when could you fall into that trap? How to get out of it?"
  
- Closures and Event Listeners
+ Closures and Event Listeners  (https://www.udacity.com/course/viewer#!/c-ud989/l-3437288625/e-3415019302/m-3426659301)
 The problem:
 
 Let's say we're making an element for every item in an array. When each is clicked, it should alert its number. The simple approach would be to use a for loop to iterate over the list elements, and when the click happens, alert the value of num as we iterate over each item of the array. Here's an example:
@@ -161,3 +161,17 @@ MODEL: Where all the data is stored. That includes data from the server and from
 OCTOPUS: the model and the view are connected by octopus, providing SEPARATION OF CONCERNS. Think of OCTOPUS as the thing
         that holds things together, but keeps them separate enough to allow changes in individual pieces without
         upseting the rest.
+
+
+REFACTORING WITH SEPARATION OF CONCERNS - ANDY'S CODE (1 & 2)
+
+how is Andy displaying the cats when you click each of the buttons at the top?
+
+
+Yes! Andy is keeping a completely separate view for each cat, and just showing and hiding them depending on which cat is selected. Although it works, it's not the best solution. (If we had 1000 cats, we'd have 1000 DOM nodes too, which is overkill.
+
+
+
+
+REFACTORING WITH SEPARATION OF CONCERNS - REFACTORING THE RESUME
+Any project that updates the DOM based on data using JS, can be refactored to use separation of concerns.
