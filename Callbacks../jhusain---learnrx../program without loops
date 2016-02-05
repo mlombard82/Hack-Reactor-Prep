@@ -9,7 +9,7 @@ forEach
 
 
 
-Map  // takes a function and applies it to every item in a collection, creating a new value and then creating a NEW ARRAY
+Map  // takes a function and applies it to every item in a collection, creating a new value and then creates a NEW ARRAY
      //with the results
      
 [1,2,3].map(x => x + 1)        
