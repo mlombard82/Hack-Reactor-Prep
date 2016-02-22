@@ -15,7 +15,6 @@ original string)
 Syntax
 string.split(separator,limit)
 
-
 Parameter	Description
 separator	Optional. Specifies the character/regexp to use for splitting the string. If omitted, the entire string will be
 returned (an array with only one item)
