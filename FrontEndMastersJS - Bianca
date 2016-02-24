@@ -16,6 +16,7 @@ var key = 'material';
 console.log(box.key);    //undefined
 console.log(box[key]);   //'cardboard'
 
+
 ....................
 Storing Data
 when we store a function as a property in an object, we call it a method.
