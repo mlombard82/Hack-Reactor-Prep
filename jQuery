@@ -15,4 +15,5 @@ $('.caption-text')
   .css('background-color', 'orange');
 
 
-  Responding to User input: http://codepen.io/btholt/pen/ujlEz
+  Responding to User input: 
+  Using anonymous functions, Brian demonstrates how to capture input from the user. He creates a simple click event which shows an alert box in the browser. The click event is passed the function that should be called when the event fires // (http://codepen.io/btholt/pen/ujlEz)
