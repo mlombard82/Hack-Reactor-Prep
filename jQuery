@@ -16,4 +16,54 @@ $('.caption-text')
 
 
   Responding to User input: 
+
   Using anonymous functions, Brian demonstrates how to capture input from the user. He creates a simple click event which shows an alert box in the browser. The click event is passed the function that should be called when the event fires // (http://codepen.io/btholt/pen/ujlEz)
+
+  These events bubble up. As soon as you click, they fire up.
+
+  HTML
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Responding to User Input</title>
+</head>
+<body>
+  <button class="alert-btn" type="button">Click me!</button>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+</body>
+</html>
+
+JAVASCRIPT
+
+$(".alert-btn").click(function() {
+  alert("Hey there!");
+});
+
+$('.alert-btn').click(function(){
+  $('.alert-btn').text('changed');
+});
+
+
+
+
+
+
+jQuery get input text. Expanding on the jQuery button-click code, Brian adds an input field so the text from the field can be included in the alert box. He demonstrates how to both get and set text in the input field and fields a few general questions about HTML form elements.
+
+
+HTML
+
+<input placeholder ="your name" type="text" class="name-input" />
+<button class="alert-btn" type="button">Click me!</button>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+JAVASCRIPT
+
+$('.alert-btn').click(function() {
+  var name = $('.name-input').val();
+  alert("Hey " + name);
+  // then to clear the field again
+  $('.name-input').val(' ');
+})
