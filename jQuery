@@ -4,3 +4,15 @@ using JS to manipulate the DOM
 
 to be able to use jQuery include it in your html: 
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+to get the list of jQuery methods, write: console.log($.fn)
+
+
+chaining 
+$('.caption-text')
+  .text('Magic!')
+  .css('background-color', 'orange');
+
+
+  Responding to User input: http://codepen.io/btholt/pen/ujlEz
