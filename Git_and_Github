@@ -3,13 +3,13 @@ Git and Github
  to change directory, cd
  to move up one directory, cd ..
  to create an empty file, touch [name of the file to be created]
- to open the file, open [name of the file]
+ to open the file, open <name of the file>
  to see what the untracked files yet to be committed, git status
 
  git add, commit & push (Untracked files must be added to the repository so they can be version controlled. The add command will inform Git about they new file(s). When you are ready to save a version of the file, you will use commit. These changes are only on your computer, though. The push command will push your current version back up to the Github server.)
 
  at this point, this untracked file is a file that git knows nothing about. to add this file to
- your git repository, git add
+ your git repository, git add <file name>
 
  to commit, git commit -m "a message"
 to push to github, git push origin master
