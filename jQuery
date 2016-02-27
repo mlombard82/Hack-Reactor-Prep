@@ -1,0 +1,6 @@
+jQuery
+
+using JS to manipulate the DOM
+
+to be able to use jQuery include it in your html: 
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
