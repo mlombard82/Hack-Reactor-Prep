@@ -80,7 +80,25 @@ for that you probably have to:
 3. set that input as the paragraph.
 
 - http://codepen.io/btholt/pen/Gyqri
-
+this codepen provides a solution. This one will also work:
 */
+
+$('.user-btn').click(function() {
+  $('.user-text').text($('.user-input').val())
+});
+
+/*
+jQuery - other cool DOM functions
+There are many useful DOM-related function in jQuery. Brian talks about a few of the most
+ popular functions including css, html, show/hide, addClass/removeClass, and append. 
+ He mentions a few resources including the jQuery Documentation and sites like Stack Overflow.
+
+ .css() - Get/update css values.
+ .html() - Set the inner HTML of an element.
+ .show()/hide() - Displays/hides an element.
+ .addClass()/.removeClass() - add or remove a class.
+ .append() - Add an element to the existing elements in an element.
+*/
+
 
 
