@@ -1,6 +1,6 @@
 jQuery
 
-using JS to manipulate the DOM
+/*using JS to manipulate the DOM
 
 to be able to use jQuery include it in your html: 
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -17,7 +17,8 @@ $('.caption-text')
 
   Responding to User input: 
 
-  Using anonymous functions, Brian demonstrates how to capture input from the user. He creates a simple click event which shows an alert box in the browser. The click event is passed the function that should be called when the event fires // (http://codepen.io/btholt/pen/ujlEz)
+  Using anonymous functions, Brian demonstrates how to capture input from the user. He creates a simple click event which shows an alert box in the browser. 
+  The click event is passed the function that should be called when the event fires // (http://codepen.io/btholt/pen/ujlEz)
 
   These events bubble up. As soon as you click, they fire up.
 
@@ -33,7 +34,7 @@ $('.caption-text')
   <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 </body>
 </html>
-
+*/
 JAVASCRIPT
 
 $(".alert-btn").click(function() {
@@ -48,8 +49,9 @@ $('.alert-btn').click(function(){
 
 
 
-
-jQuery get input text. Expanding on the jQuery button-click code, Brian adds an input field so the text from the field can be included in the alert box. He demonstrates how to both get and set text in the input field and fields a few general questions about HTML form elements.
+/*
+jQuery get input text. Expanding on the jQuery button-click code, Brian adds an input field so the text from the field can be included in the alert box.
+ He demonstrates how to both get and set text in the input field and fields a few general questions about HTML form elements.
 
 
 HTML
@@ -58,7 +60,7 @@ HTML
 <button class="alert-btn" type="button">Click me!</button>
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-
+*/
 JAVASCRIPT
 
 $('.alert-btn').click(function() {
@@ -67,3 +69,18 @@ $('.alert-btn').click(function() {
   // then to clear the field again
   $('.name-input').val(' ');
 })
+
+/*
+In this exercise, you must use jQuery to make text from an input field appear in a paragraph tag when a button is clicked. 
+You will not need to modify the HTML in the exercise to complete it. - http://codepen.io/btholt/pen/lbwuI
+
+for that you probably have to:
+1. set up an event listener on the button
+2. grab whatever the value is in the input
+3. set that input as the paragraph.
+
+- http://codepen.io/btholt/pen/Gyqri
+
+*/
+
+
