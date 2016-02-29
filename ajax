@@ -65,4 +65,43 @@ You’ll need the jQuery methods .click(), .append(), and .ajax()
 You shouldn’t need to touch HTML or CSS.
 The data is fairly nested. The data that concerns you is data.children[i].data.thumbnail. children is an array you’ll loop over.
 
+YOU HAVE THE SOLUTION IN CODEPEN. here he is how Bryan did it classroom:
 
+As the meetup API example, this code will just spit raw JSON
+
+$('.btn').click(function() {
+  
+  $('.text').text('loading . . .');
+  
+  $.ajax({
+    type:"GET",
+    url:"http://www.reddit.com/r/aww/search.json?q=puppy&restrict_sr=true",
+    success: function(data) {
+      $('.text').text(JSON.stringify(data));
+    },
+  });
+  
+});
+
+
+
+// what we ended up with in the classroom
+
+$('.btn').click(function() {
+  
+  $('.text').text('loading . . .');
+  
+  $.ajax({
+    type:"GET",
+    url:"http://www.reddit.com/r/aww/search.json?q=puppy&restrict_sr=true",
+    success: function(response) {
+      $('.text').text('');
+      for(var i = 0; i < response.data.children.length; i++){
+        var image = "<img src='" + response.data.children[i].data.thumbnail + "'/>";
+        $('.text').append(image);
+      }
+    },
+  });
+  
+});
+});
