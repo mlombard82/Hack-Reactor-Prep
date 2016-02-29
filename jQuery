@@ -35,7 +35,7 @@ $('.caption-text')
 </body>
 </html>
 */
-JAVASCRIPT
+
 
 $(".alert-btn").click(function() {
   alert("Hey there!");
@@ -61,7 +61,7 @@ HTML
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 */
-JAVASCRIPT
+
 
 $('.alert-btn').click(function() {
   var name = $('.name-input').val();
