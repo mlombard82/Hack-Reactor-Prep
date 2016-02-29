@@ -1,0 +1,43 @@
+
+- http://codepen.io/btholt/pen/FArdh
+
+/*there are various http verbs. 2 of the key ones are GET and POST
+the 'dataType: 'jsonp' thing has to do with how the meetup API works.
+
+what we are trying to get at, is we are asking the meetup API, please give me all of your cities.
+
+
+
+
+
+
+
+Brian expands on his first AJAX example by displaying the data in a more readable format. Rather than showing the raw JSON data returned from the server, Brian parses the data and shows the city and state.
+http://codepen.io/btholt/pen/mjBkq
+
+In the JS here, using APPEND we are saying: please preserve what is already there and keep adding places. if we had used HTML instead, it would have displayed only the last element.
+
+if instead of just city & state I wanted to display all the data regarding cities: */
+
+
+success: function(data) {
+      $('.text').html('');
+      for (var i = 0; i < data.results.length; i++) {
+
+        var cityObject = data.results[i];
+        var place = "";
+        for(var prop in cityObject){
+          if(cityObject.hasOwnProperty(prop)){
+            place += prop + "-" + cityObject[prop] + " ";
+          }
+        }
+        //var place = data.results[i].city + ", " + data.results[i].state
+        $('.text').append('<p>' + place + '</p>');
+      }
+      
+    },
+    dataType: 'jsonp',
+  });
+  
+});
+
