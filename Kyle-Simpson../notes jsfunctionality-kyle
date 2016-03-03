@@ -1,0 +1,16 @@
+
+JS Functionality with Kyle
+
+task #1
+
+we are going to use a jQuery "document-ready" event handler to make sure your code doesn't run too early.
+
+$(document).ready is a special event that your browser fires. it lets you know that the DOM is being parsed and is ready to go.
+
+kyle is not a big fan of using ID to link JS to the html, and the reason is that ID's are used in CSS(#page, #carousel etc). ID's are more commonly associated with attaching style to a specific element in your page. it is a matter of design. also easier to maintain....
+so there are many approaches. kyle prefers using the 'rel' attribute. he likes it because it is valid in nearly every single element on your page, and mostly it doesn't mean anything. is valid and it has no meaning, so is a little, nice hook for us to use. 
+'rel' means relationship, in this case ('a' tag)between my page and some other page.
+
+notice that there is a rel='js-controls' wrapper div around the 2 header links.
+so, if i were to find an element by attribute in $- you use $("[]")  - 
+so here 
