@@ -1,16 +1,65 @@
 
-JS Functionality with Kyle
+// JS Functionality with Kyle
 
-task #1
+// task #1 Kyle beings walking through the solution to the first task. He creates a click event handler and stops the event from propagating.
 
-we are going to use a jQuery "document-ready" event handler to make sure your code doesn't run too early.
+// we are going to use a jQuery "document-ready" event handler to make sure your code doesn't run too early.
 
-$(document).ready is a special event that your browser fires. it lets you know that the DOM is being parsed and is ready to go.
+// $(document).ready is a special event that your browser fires. it lets you know that the DOM is being parsed and is ready to go.
 
-kyle is not a big fan of using ID to link JS to the html, and the reason is that ID's are used in CSS(#page, #carousel etc). ID's are more commonly associated with attaching style to a specific element in your page. it is a matter of design. also easier to maintain....
-so there are many approaches. kyle prefers using the 'rel' attribute. he likes it because it is valid in nearly every single element on your page, and mostly it doesn't mean anything. is valid and it has no meaning, so is a little, nice hook for us to use. 
-'rel' means relationship, in this case ('a' tag)between my page and some other page.
+// kyle is not a big fan of using ID to link JS to the html, and the reason is that ID's are used in CSS(#page, #carousel etc). ID's are more commonly associated with attaching style to a specific element in your page. it is a matter of design. also easier to maintain....
+// so there are many approaches. kyle prefers using the 'rel' attribute. he likes it because it is valid in nearly every single element on your page, and mostly it doesn't mean anything. is valid and it has no meaning, so is a little, nice hook for us to use. 
+// 'rel' means relationship, in this case ('a' tag)between my page and some other page.
 
-notice that there is a rel='js-controls' wrapper div around the 2 header links.
-so, if i were to find an element by attribute in $- you use $("[]")  - 
-so here 
+// notice that there is a rel='js-controls' wrapper div around the 2 header links.
+// so, if i were to find an element by attribute in $- you use $("[]")  - 
+// so here 
+
+ $("[rel='js-controls'] > [rel*='js-register']") //go find any element in the page that has a rel attribute whose value is 'js-controls' and get me the child element 'js-register'. that's a way for me getting at the register link.
+
+// the solutions doc for task 1 has a different way..which is to attach not even to the controls,
+// but to the header element itself (in the html there is a parent element called js-header) and there is 
+// a thing called "event bubbling", which means if I click on something and I don't have a handler
+// on that, the bubble will make that event fire on any of its parent elements too. so i can attach
+// a click handler to the header element and the link clicks will bubble up for me, which is nice
+// and convenient. 
+
+var $modal = $("[rel=js-modal]");
+
+$("[rel=js-header]").on("click", "> [rel^=js]", function(evt){  
+  evt.preventDefault();                           
+  evt.stopPropagation();
+  evt.stopImmediatePropagation();
+
+  var url = $(evt.target).attr("href");
+
+  $.ajax(url,{ dataType: "text" })
+  .then(function(contents){
+    $modal.html(contents).show();
+  });
+});
+
+/*the function is the click handler. what we know inside of this function is that, if we get this function call, we know that one of our 2 links was clicked.
+ in terms of event management with jQuery, many people do things like return false etc. There is another way of managing this event so that we handle it
+and it doesn't bubble anywhere or do anything else.
+
+01:03:24 - 01:15:35
+Kyle wraps up the solution to the first task by performing an AJAX request and displaying the modal dialog.
+
+the element that was clicked was an "a" tag, which has an href in it, and that href is the url that
+we want to load. we essentially want to make an AJAX request for that file, get its content and
+put it in a module.
+
+so i can get the url by looking at the element that was clicked on, which is going to be
+evt.target. i want helpers for it, so am going to wrap jQuery around it, and i want to get
+its href attribute.
+
+then is how we do an ajax call. we give it the url, tell it that am expecting to get back text,
+so that it doesn't do any parsing
+.then is basically how i specify my callback (this is part of the jQuery api, though it looks like it is a native promise)
+
+the point am making here is that we are already using some of the elements we have seen, like,
+we are passing a callback function.
+$ is a function
+"on" is a function, con 3 parameters being passed, one of which is a callback. we are asking
+for this callback to be invoked whenever somebody clicks on a link.
