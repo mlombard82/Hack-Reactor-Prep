@@ -63,3 +63,31 @@ we are passing a callback function.
 $ is a function
 "on" is a function, con 3 parameters being passed, one of which is a callback. we are asking
 for this callback to be invoked whenever somebody clicks on a link.
+
+
+
+
+task#2
+2. 
+
+    01:15:36 - 01:22:57 
+To begin the second task, you will add event handlers to the left and right buttons in the 
+carousel. The code for creating the scroll effect is already provided by Kyle.
+
+
+i have a $left element and i have a scroll left function and i want to put those 2 together
+as a click handler
+
+3,4,5.
+The next part of the second task requires you to use another AJAX request to load the details for whichever item is selected in the carousel.
+i am inside the details file, and i have already set up for you references to the variables (item, content)
+
+that ID .html is the file that i want to load 
+there are a few ways of doing that, but i will use regex: you can replace anything that isn't 
+that final number with an empty string
+^ start at the beginning of the string
+.* match everything until we get to some digits
+$1 replacing it with what was inside of the parenthesis, the digit in this case.
+
+in the ajax call, the dataType: text is to tell jQuery not to parse anything, but to treat it
+as text
