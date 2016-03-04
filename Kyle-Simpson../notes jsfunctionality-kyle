@@ -91,3 +91,35 @@ $1 replacing it with what was inside of the parenthesis, the digit in this case.
 
 in the ajax call, the dataType: text is to tell jQuery not to parse anything, but to treat it
 as text
+
+
+
+
+task#3 Header module
+
+
+    01:37:35 - 01:49:23 The third task focuses on reorganizing the existing functionality 
+    using the module pattern. Each JavaScript file should expose one module, contain an init()
+    method, and have a public API. Kyle begins by refactoring the Header.
+
+in header.js, if document. ready wasn't there, $modal would be a global variable. that's the 
+sort of code smell we want to avoid. so far there is no organization to this at all. 
+
+the first thing we want is to have a thing to represent our module, var Header. will wrap a 
+function around everything here. if we want to execute the function we turn it into an IIFE.
+ 
+ let's move out the document ready part. we will come back to that.
+
+ Now, this code we have here now is essentially  the initialization code for our Header module.
+ so wrap a function init around all that code.
+ take the callback function, move it out ,and just pass it as a callback into the init function.
+ now, the $modal variable is being declared in init, but used in another one. there is a simple
+ fix: make it available to all the functions here by making it a module level variable declaration.
+ the last step is that the module needs a publi API, so i need to return an object, and put a
+ reference to that init function.
+ Essentially, the object that we return gets assigned to a variable called Header, meaning that
+ in the outside, we can call Header.init
+ And that is what we want to pass to document.ready 
+
+
+
